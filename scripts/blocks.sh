@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-function blocks.sh(){
+function blocks.sh() {
 
     # blocks.sh
     #   ███▄  ███▄  ███▄  ███▄  ███▄  ███▄  ███▄
