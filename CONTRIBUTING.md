@@ -1,6 +1,6 @@
 # **Contributing**
 
-If you have any useful shell script that you'd like to be added, please creat a new pull request according to the instructions.
+Contributions are more than welcome! If you have any useful shell script that you'd like to be added, please creat a new pull request according to the instructions.
 
 ## Pull Request Process
 
