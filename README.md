@@ -1,6 +1,6 @@
 # **Shell Scripts**
 
-This repository contains useful miscellaneous shell scripts that can be ran on any **UNIX** or like system.
+This repository contains useful miscellaneous shell scripts that will make your life easier. They can be ran on any UNIX or like system.
 
 # Setup
 
