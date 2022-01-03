@@ -1,4 +1,4 @@
-function cpp(){
+function ccp(){
 
   # You can modify the file extension to the one you use, e.g. `.cc`, `.cxx`, etc..
   # You can change the `c++` to the command you use, e.g. `gcc`, `g++`, etc..

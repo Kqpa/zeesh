@@ -1,4 +1,4 @@
-# Shell Scripts
+# **Shell Scripts**
 
 This repository contains useful miscellaneous shell scripts that can be ran on any **UNIX** or like system.
 
@@ -28,3 +28,7 @@ This repository contains useful miscellaneous shell scripts that can be ran on a
     - `cd` into the `.shell-scripts` directory.
     - Run `git pull`
     - Reload your shell, for example if you use `zsh` as your shell running `zsh` would reload it.
+
+- ## Contributing
+    
+    - See [`CONTRIBUTING.md`](https://github.com/Kqpa/.shell-scripts/blob/master/CONTRIBUTING.md).
