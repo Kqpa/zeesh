@@ -2,16 +2,12 @@
 
 This repository contains useful miscellaneous shell scripts that can be ran on any **UNIX** or like system.
 
-<br/>
-
 # Setup
 
 - ## Dependencies
     - git
     - any shell
     - any terminal
-
-<br/>
 
 - ## Installation
 
@@ -26,8 +22,6 @@ This repository contains useful miscellaneous shell scripts that can be ran on a
         ```sh 
         source ~/.shell-scripts/.main.sh
         ```
-
-<br/>
 
 - ## New Scripts
 
