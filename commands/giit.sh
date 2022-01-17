@@ -10,6 +10,8 @@ clear
   printf "Commit message: " && read -r message
   printf "Push changes (y/n): " && read -r push
 
+  if [ -z "$repository" ] ;then ;cd . ;else ;cd $repository ;fi
+
 clear
 
   if [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Yyes]}" ]] ;then 
