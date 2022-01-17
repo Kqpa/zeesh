@@ -1,17 +1,16 @@
 # **Shell Scripts**
 
-This repository contains useful miscellaneous shell scripts that will make your life easier. They can be ran on any UNIX or like system.
+This repository contains miscellaneous shell scripts which can be used on any UNIX or like system.
 
 # Setup
 
 - ## Dependencies
-    - git
-    - any shell
-    - any terminal
+    - git (for updates)
+    - zsh (recommend shell)
 
 - ## Installation
 
-    - **1**: Clone the git repository in any path you'd like.
+    - **1**: Clone the git repository in any path you'd like, although i suggest your home directory.
    
     - **2**: Open the `.main.sh` file and set your directory to the `$DIRECTORY` variable. For example, if you cloned the repository inside your home directory, you would set it to:
         ```sh 
@@ -27,7 +26,7 @@ This repository contains useful miscellaneous shell scripts that will make your 
 
     - `cd` into the `.shell-scripts` directory.
     - Run `git pull`
-    - Reload your shell, for example if you use `zsh` as your shell running `zsh` would reload it.
+    - Reload your shell.
 
 - ## Contributing
     
