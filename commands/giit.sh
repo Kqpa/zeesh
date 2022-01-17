@@ -6,18 +6,24 @@ function giit(){
 clear
   
   dir=$(pwd) && printf "(Current: "${dir}") Repository path: " && read -r repository
-  printf "Branch: " && read -r branch
   printf "Pull changes before commiting (y/n): " && read -r pull
   printf "Commit message: " && read -r message
+  printf "Push changes (y/n): " && read -r push
 
 clear
 
-  if [ -z "$repository" ] ;then ;cd . ;else ;cd $repository ;fi
-
-  if [ "$pull" != "${pull#[Yyes]}" ] ;then 
-    git add . && git pull --force && git commit -m "$message" && git push origin $branch --force
-  else
-    git add . && git commit -m "$message" && git push origin $branch --force
+  if [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Yyes]}" ]] ;then 
+    git add . && git pull && git commit -m "$message" && git push
+ 
+  elif [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Nno]}" ]] ;then 
+    git add . && git pull && git commit -m "$message"
+  
+  elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Nno]}" ]] ;then
+    git add . && git commit -m "$message"
+  
+  elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Yyes]}" ]] ;then
+    # This can't be done, but it's here so the user can see the error.
+    git add . && git commit -m "$message" && git push 
   fi
 
 }

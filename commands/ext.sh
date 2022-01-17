@@ -1,8 +1,9 @@
-# This script extracts compressed folders
-# Please install the extractors from your package manager
-# Credits to Waffelo for this time-saving script
+function ext ()
 
-ext ()
+  # This script extracts compressed folders
+  # Please install the extractors from your package manager
+  # Credits to Waffelo for this time-saving script
+
 {
   if [ -f $1 ] ; then
     case $1 in
