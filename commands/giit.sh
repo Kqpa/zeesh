@@ -11,7 +11,7 @@ clear
     br=$(git rev-parse --abbrev-ref HEAD) && dir=$(pwd) 
     clear && printf "[current: "${dir}" "on" "${br}"] \n"
   else
-    dir=$(pwd) && clear && printf "[current: "${dir}"] \n"
+    dir=$(pwd) && clear && printf "[current: "${dir}", git not initialized] \n"
     printf "Repository path: " && read -r repository
     if [ -z "$repository" ] ;then ;cd . ;else ;cd $repository ;fi
   fi
