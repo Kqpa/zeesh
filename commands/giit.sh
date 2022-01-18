@@ -5,8 +5,8 @@ function giit(){
 
 clear
   
-  br=$(git rev-parse --abbrev-ref HEAD)
-  dir=$(pwd) && printf "[current: "${dir}" "on" "${br}"] \n"
+  br=$(git rev-parse --abbrev-ref HEAD) && dir=$(pwd) 
+  printf "[current: "${dir}" "on" "${br}"] \n"
   printf "Repository path: " && read -r repository
   printf "Pull changes before commiting (y/n): " && read -r pull
   printf "Commit message: " && read -r message
