@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function ccp(){
 
   # You can modify the `$file_extension` to the one you use, e.g. `.cc`, `.c`, etc..

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function blocks.sh(){
 
     # blocks.sh

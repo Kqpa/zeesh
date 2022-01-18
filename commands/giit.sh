@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function giit(){
 
   # You can skip the repository question if you are already in the correct path

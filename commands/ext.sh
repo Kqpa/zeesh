@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function ext(){
 
   # This script extracts compressed files
