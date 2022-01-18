@@ -1,10 +1,9 @@
-function ext ()
+function ext(){
 
   # This script extracts compressed files
   # Please install the extractors from your package manager
   # Credits to Waffelo for this time-saving script
 
-{
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;
@@ -26,4 +25,5 @@ function ext ()
   else
     echo "'$1' is not a valid file"
   fi
+
 }

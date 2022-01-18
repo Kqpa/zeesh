@@ -10,8 +10,7 @@ function ccp(){
 
 clear
 
-  printf "Enter file name: "
-  read -r file_name
+  dir=$(pwd) && printf "(Current: "${dir}") Enter file: " && read -r file_name
 
 clear
 
