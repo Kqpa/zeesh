@@ -6,7 +6,7 @@ This repository contains miscellaneous shell scripts which can be used on any UN
 
 - ## Dependencies
     - git (for updates)
-    - zsh (recommended shell)
+    - zsh (recommended shell, you might get syntax errors on other shells)
 
 - ## Installation
 
