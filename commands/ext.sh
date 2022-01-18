@@ -1,6 +1,6 @@
 function ext ()
 
-  # This script extracts compressed folders
+  # This script extracts compressed files
   # Please install the extractors from your package manager
   # Credits to Waffelo for this time-saving script
 

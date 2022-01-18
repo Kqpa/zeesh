@@ -5,8 +5,7 @@ function blocks.sh() {
     #   ████  ████  ████  ████  ████  ████  ████
     #   ████  ████  ████  ████  ████  ████  ████
     #    ▀▀▀   ▀▀▀   ▀▀▀   ▀▀▀   ▀▀▀   ▀▀▀   ▀▀▀
-    # Prints colorful blocks of code, kind of an eye candy that you can add to your shellrc.
-    # Add by pasting `blocks.sh` into your shell profile
+    # Prints colorful blocks, an eye candy that you can add to your shell startup.
 
     printf '
  \033[31m███\033[1m▄\033[m  \033[32m███\033[1m▄\033[m  \033[33m███\033[1m▄\033[m  \033[34m███\033[1m▄\033[m  \033[35m███\033[1m▄\033[m  \033[36m███\033[1m▄\033[m  \033[37m███\033[1m▄\033[m

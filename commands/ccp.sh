@@ -1,7 +1,12 @@
 function ccp(){
 
-  # You can modify the file extension to the one you use, e.g. `.cc`, `.cxx`, etc..
-  # You can change the `c++` to the command you use, e.g. `gcc`, `g++`, etc..
+  # You can modify the `$file_extension` to the one you use, e.g. `.cc`, `.c`, etc..
+  # You can modify the `$compiler_command` to the command you use, e.g. `gcc`, `g++`, etc..
+
+  file_extension=".cpp"
+  compiler_command="c++"
+
+  # Reload your shell after you change these values
 
 clear
 
@@ -10,18 +15,16 @@ clear
 
 clear
 
-  if [[ $file_name == *".cpp"* ]]; then
-    echo Compiling $file_name...
-    fi
-  if [[ $file_name != *".cpp"* ]]; then
-    echo Compiling $file_name.cpp...
-    fi
+  if [[ $file_name == *"$file_extension"* ]]; then
+    echo "Compiling & executing" $file_name...
+  elif [[ $file_name != *"$file_extension"* ]]; then
+    echo "Compiling & executing" $file_name$file_extension...
+  fi
 
-  if [[ $file_name == *".cpp"* ]]; then
-    c++ $file_name && ./a.out && rm -rf a.out
-    fi
-  if [[ $file_name != *".cpp"* ]]; then
-    c++ $file_name.cpp && ./a.out && rm -rf a.out
-    fi
+  if [[ $file_name == *"$file_extension"* ]]; then
+    $compiler_command $file_name && ./a.out && rm -rf a.out
+  elif [[ $file_name != *"$file_extension"* ]]; then
+    $compiler_command $file_name$file_extension && ./a.out && rm -rf a.out
+  fi
 
 }
