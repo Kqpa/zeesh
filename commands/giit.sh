@@ -2,19 +2,23 @@
 
 function giit(){
 
-  # You can skip the repository question if you are already in the correct path
+  # This script allows you to quickly commit, pull, or push in one command
   # Feel free to customize it for your use
 
 clear
   
-  br=$(git rev-parse --abbrev-ref HEAD) && dir=$(pwd) 
-  printf "[current: "${dir}" "on" "${br}"] \n"
-  printf "Repository path: " && read -r repository
+  if git rev-parse --abbrev-ref HEAD; then
+    br=$(git rev-parse --abbrev-ref HEAD) && dir=$(pwd) 
+    clear && printf "[current: "${dir}" "on" "${br}"] \n"
+  else
+    dir=$(pwd) && clear && printf "[current: "${dir}"] \n"
+    printf "Repository path: " && read -r repository
+    if [ -z "$repository" ] ;then ;cd . ;else ;cd $repository ;fi
+  fi
+
   printf "Pull changes before commiting (y/n): " && read -r pull
   printf "Commit message: " && read -r message
   printf "Push changes (y/n): " && read -r push
-
-  if [ -z "$repository" ] ;then ;cd . ;else ;cd $repository ;fi
 
 clear
 
