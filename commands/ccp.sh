@@ -2,8 +2,8 @@
 
 function ccp(){
 
-  # You can modify the `$file_extension` to the one you use, e.g. `.cc`, `.c`, etc..
-  # You can modify the `$compiler_command` to the command you use, e.g. `gcc`, `g++`, etc..
+  # You can modify the `$file_extension` to the one you use, e.g. `.cc`, `.c`, etc...
+  # You can modify the `$compiler_command` to the command you use, e.g. `gcc`, `g++`, etc...
 
   file_extension=".cpp"
   compiler_command="c++"
