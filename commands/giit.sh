@@ -32,7 +32,7 @@ clear
     git add . && git commit -m "$message"
   
   elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Yyes]}" ]] ;then
-    # This can't be done, but it's here so the user can see the error.
+    
     git add . && git commit -m "$message" && git push 
   fi
 
