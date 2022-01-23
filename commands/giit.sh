@@ -24,15 +24,11 @@ clear
 
   if [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Yyes]}" ]] ;then 
     git add . && git pull && git commit -m "$message" && git push
- 
   elif [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Nno]}" ]] ;then 
     git add . && git pull && git commit -m "$message"
-  
   elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Nno]}" ]] ;then
     git add . && git commit -m "$message"
-  
   elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Yyes]}" ]] ;then
-    
     git add . && git commit -m "$message" && git push 
   fi
 
