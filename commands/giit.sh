@@ -16,7 +16,7 @@ clear
     if [ -z "$repository" ] ;then ;cd . ;else ;cd $repository ;fi
   fi
 
-  printf "Pull changes before commiting (y/n): " && read -r pull
+  printf "Pull changes before committing (y/n): " && read -r pull
   printf "Commit message: " && read -r message
   printf "Push changes (y/n): " && read -r push
 
