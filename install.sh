@@ -9,7 +9,7 @@ if [[ $dir == $default ]]; then
     echo "[i] => Reloaded shell configuration."
 
     cd ~/.shell-scripts
-    echo "[i] => Installed successfully."
+    echo "[i] => Installed successfully. Please restart your terminal."
 
 elif [[ $dir != $default ]]; then
     
@@ -23,6 +23,6 @@ elif [[ $dir != $default ]]; then
     echo "[i] => Reloaded shell configuration."
     
     cd ~/.shell-scripts
-    echo "[i] => Installed successfully."
+    echo "[i] => Installed successfully. Please restart your terminal."
 
 fi
