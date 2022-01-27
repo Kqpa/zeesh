@@ -1,4 +1,3 @@
-# See installation part 2
 DIRECTORY=".shell-scripts"
 
 # Sourcing shell commands

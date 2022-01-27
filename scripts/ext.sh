@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function ext {
 
   # Function to extract files

@@ -4,7 +4,6 @@ package_manager="brew" # If package manager requires root, add sudo before the 
 update_command="update"
 upgrade_command="upgrade"
 install_command="install"
-cleanup_command="cleanup"
 info_command='info'
 
 # Change the alias names to the ones you prefer
@@ -21,4 +20,4 @@ alias brinf='$package_manager $info_command' # Gives information about package
 
 alias brclean='$package_manager $cleanup_command' # Cleans up packages 
 
-alias brewski='$package_manager $update_command && $package_manager $upgrade_command && $package_manager cleanup; $package_manager doctor' # Finds problems about brew packages
+alias brewski='brew update && brew upgrade && brew cleanup; brew doctor' # This is an aliases exclusively for brew
