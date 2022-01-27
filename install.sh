@@ -13,7 +13,7 @@ if [[ $dir == $default ]]; then
 
 elif [[ $dir != $default ]]; then
     
-    mv $dir $default
+    mv -f $dir $default
     echo "[i] => Moved repository to home directory."
 
     echo 'source ~/.shell-scripts/.main.sh' >> ~/.zshrc
@@ -23,5 +23,6 @@ elif [[ $dir != $default ]]; then
     echo "[i] => Reloaded shell configuration."
     
     cd ~/.shell-scripts
-    echo "Installed successfully. "
+    echo "[i] => Installed successfully."
+
 fi
