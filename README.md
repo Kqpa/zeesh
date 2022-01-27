@@ -1,33 +1,27 @@
 # **Shell Scripts**
 
-This repository contains miscellaneous shell scripts which can be used on any UNIX or like system.
+This repository contains miscellaneous shell scripts that I personally use.
 
-# Setup
+# Installation
 
-- ## Dependencies
-    - git (for updates)
-    - zsh (recommended shell, you might get syntax errors on other shells)
+You'll need `zsh` for this repository to function properly as a whole. Individual shell scripts might require external dependencies if you want to use them. If you're using any other shell, you're free to modify to source code. 
 
-- ## Installation
+If you move the repository from the home directory, you'll need to change the `DIRECTORY=".shell-scripts/commands"` in the `.main.sh` file to the directory you moved the repository to. After doing that, you will have to change the sourced path on your shell configuration.
 
-    - **1**: Clone the repository in any path you'd like, although i suggest your home directory.
-   
-    - **2**: Open the `.main.sh` file and set the `$DIRECTORY` variable to the path you cloned the repository to. For example, if you cloned the repository inside your home directory, you would set it to:
-        ```sh 
-        DIRECTORY=".shell-scripts/commands"
-        ```
-   
-    - **3**: Open your `.shellrc` and source the `.main.sh` file. For example, if you cloned the repository to your home directory and you're using `zsh` as your shell, you'd edit your `.zshrc` and add: 
-        ```sh 
-        source ~/.shell-scripts/.main.sh
-        ```
+```sh
+git clone https://github.com/Kqpa/.shell-scripts
+cd .shell-scripts 
+chmod +x install.sh && ./install.sh
+```
 
-- ## New Scripts
+# Update
 
-    - `cd` into the `.shell-scripts` directory.
-    - Run `git pull`
-    - Reload your shell.
+```sh
+cd ~/.shell-scripts
+git pull
+source ~/.zshrc
+```
 
-- ## Contributing
-    
-    - See [`CONTRIBUTING.md`](https://github.com/Kqpa/.shell-scripts/blob/master/CONTRIBUTING.md).
+# Contributing
+
+- See [`CONTRIBUTING.md`](https://github.com/Kqpa/.shell-scripts/blob/master/CONTRIBUTING.md).
