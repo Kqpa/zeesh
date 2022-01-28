@@ -4,6 +4,7 @@ package_manager="brew" # If package manager requires root, add sudo before the 
 update_command="update"
 upgrade_command="upgrade"
 install_command="install"
+uninstall_command="remove"
 info_command='info'
 
 # Change the alias names to the ones you prefer
@@ -15,6 +16,8 @@ alias brupd='$package_manager $update_command' # Updates local packages
 alias brupg='$package_manager $upgrade_command' # Upgrades everything
 
 alias brin='$package_manager $install_command' # Installs package
+
+alias brrm='$package_manager $uninstall_command' # Uninstalls package
 
 alias brinf='$package_manager $info_command' # Gives information about package
 
