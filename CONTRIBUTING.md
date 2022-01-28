@@ -12,4 +12,4 @@ Contributions are more than welcome, if you have any useful shell script that yo
   
     - Format the file to make it readable, don't submit something messy.
 
-2. Source the shell script to the `.main.sh` file.
+2. Source the shell script to the [`.main.sh`](https://github.com/Kqpa/.shell-scripts/blob/master/.main.sh) file.

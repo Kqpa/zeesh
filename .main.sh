@@ -1,4 +1,4 @@
-DIRECTORY=".shell-scripts"
+DIRECTORY=".shell-scripts" # Default is ~/.shell-scripts
 
 # Sourcing shell commands
 SCRIPTS="${DIRECTORY}/scripts"
@@ -12,6 +12,7 @@ source ~/$SCRIPTS/giit.sh
 ALIASES="${DIRECTORY}/aliases"
 
 source ~/$ALIASES/cd.sh
+source ~/$ALIASES/chsh.sh
 source ~/$ALIASES/confirm.sh
 source ~/$ALIASES/etc.sh
 source ~/$ALIASES/git.sh
