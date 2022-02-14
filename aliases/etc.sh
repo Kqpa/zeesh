@@ -8,6 +8,8 @@ alias mkdir='mkdir -pv'
 
 alias reboot='sudo reboot'
 
+alias shutdown='sudo shutdown now'
+
 alias reload='source ~/.zshrc' 
 
 alias weather='curl "wttr.in"'
