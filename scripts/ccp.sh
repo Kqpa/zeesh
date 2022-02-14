@@ -18,15 +18,21 @@ clear
 clear
 
   if [[ $file_name == *"$file_extension"* ]]; then
+    
     echo "Compiling & executing" $file_name...
+    
+    output="$(basename ${file_name} ${file_extension})"
+    
+    $compiler_command $file_name -o $output && ./$output && rm -rf $output
+  
   elif [[ $file_name != *"$file_extension"* ]]; then
+    
     echo "Compiling & executing" $file_name$file_extension...
-  fi
+    
+    output=$file_name
 
-  if [[ $file_name == *"$file_extension"* ]]; then
-    $compiler_command $file_name && ./a.out && rm -rf a.out
-  elif [[ $file_name != *"$file_extension"* ]]; then
-    $compiler_command $file_name$file_extension && ./a.out && rm -rf a.out
+    $compiler_command $file_name$file_extension -o $output && ./$output && rm -rf $output
+  
   fi
 
 }
