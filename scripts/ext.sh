@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-function ext {
+function ext() {
 
   # Function to extract files
 
@@ -38,4 +38,5 @@ function ext {
       fi
     done
   fi
+
 }

@@ -15,3 +15,5 @@ alias reload='source ~/.zshrc'
 alias weather='curl "wttr.in"'
 
 alias mount='mount | column -t'
+
+alias cls='clear && rand.sh'
