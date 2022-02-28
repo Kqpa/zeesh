@@ -3,9 +3,9 @@
 # Author: pfh
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=127064#p127064
 
-__init__
-
 function rails() {
+
+__init__
 
 cat << EOF
 

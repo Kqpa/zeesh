@@ -3,9 +3,9 @@
 # Author: thevdude 
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=147530#p147530
 
-__init__
-
 function crunch() {
+
+__init__
 
 cat << EOF
 

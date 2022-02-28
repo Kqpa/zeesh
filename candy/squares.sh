@@ -3,9 +3,9 @@
 # Author: muzieca
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=127509#p127509
 
-__init__
-
 function squares() {
+
+__init__
 
 cat << EOF
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-__init__
-
 function void() {
+
+__init__
 
 cat << EOF
 

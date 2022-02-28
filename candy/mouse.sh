@@ -3,9 +3,9 @@
 # Author: ivo    
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=130522#p130522
 
-__init__
-
 function mouse() {
+
+__init__
 
 cat << EOF 
 
