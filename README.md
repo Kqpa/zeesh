@@ -5,9 +5,8 @@ This repository contains miscellaneous shell scripts that I personally use.
 # Installation
 
 ```sh
-git clone https://github.com/Kqpa/.shell-scripts
-cd .shell-scripts 
-chmod +x install.sh && zsh install.sh && source ~/.zshrc
+# Make sure that you have curl installed on your system
+curl -s https://github.com/Kqpa/shell-scripts/blob/master/install.sh | zsh
 ```
 
 You'll need [`zsh`](https://zsh.sourceforge.io) for this repository to function properly as a whole. Individual shell scripts might require external dependencies if you want to use them. If you're using any other shell, you're free to modify to source code. 

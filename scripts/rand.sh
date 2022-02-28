@@ -1,4 +1,7 @@
-# Add this to your shell startup for some extra fun
+#!/usr/bin/env zsh
+
+# Add this to your shell startup for a random color script at startup
+# `echo "rand.sh" >> ~/.zshrc`
 
 function rand.sh() {
   

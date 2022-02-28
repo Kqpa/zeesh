@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # Author: ivo    
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=130522#p130522

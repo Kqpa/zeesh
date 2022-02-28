@@ -1,3 +1,7 @@
+#!/usr/bin/env zsh
+
+git clone https://github.com/Kqpa/shell-scripts .shell-scripts && cd ./.shell-scripts/
+
 dir=$(pwd) && default="${HOME}/.shell-scripts"
 
 if [[ $dir == $default ]]; then
