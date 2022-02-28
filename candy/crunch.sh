@@ -3,7 +3,7 @@
 # Author: thevdude 
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=147530#p147530
 
-_init
+__init__
 
 function crunch() {
 

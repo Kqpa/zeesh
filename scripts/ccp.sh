@@ -23,7 +23,7 @@ clear
     
     output="$(basename ${file_name} ${file_extension})"
     
-    $compiler_command $file_name -o $output && ./$output && rm -rf $output
+    $compiler_command -Wall $file_name -o $output && ./$output && rm -rf $output
   
   elif [[ $file_name != *"$file_extension"* ]]; then
     
@@ -31,7 +31,7 @@ clear
     
     output=$file_name
 
-    $compiler_command $file_name$file_extension -o $output && ./$output && rm -rf $output
+    $compiler_command -Wall $file_name$file_extension -o $output && ./$output && rm -rf $output
   
   fi
 

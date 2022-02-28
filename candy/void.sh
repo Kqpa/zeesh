@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-_init
+__init__
 
 function void() {
 

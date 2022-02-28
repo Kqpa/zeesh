@@ -3,7 +3,7 @@
 # Author: ivo    
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=130522#p130522
 
-_init
+__init__
 
 function mouse() {
 

@@ -3,7 +3,7 @@
 # Author: pfh
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=127064#p127064
 
-_init
+__init__
 
 function rails() {
 

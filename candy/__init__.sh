@@ -5,7 +5,7 @@
 #    colors (f = foreground, b = background), and use the 'off'
 #    feature for anything you turn on.
 
-function _init() {
+function __init__() {
   
   esc=""
 

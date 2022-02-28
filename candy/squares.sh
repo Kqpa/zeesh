@@ -3,7 +3,7 @@
 # Author: muzieca
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=127509#p127509
 
-_init
+__init__
 
 function squares() {
 
