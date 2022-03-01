@@ -11,7 +11,7 @@
 ## Installation
 
 ```sh
-# Make sure that you have cURL & zsh installed on your system
+# Make sure that you have cURL, zsh & git installed on your system
 curl -s "https://raw.githubusercontent.com/Kqpa/shell-scripts/master/.install.sh" | zsh
 ```
 
