@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # Add this to your shell startup for a random color script at startup
 # `echo "rand.sh" >> ~/.zshrc`
 

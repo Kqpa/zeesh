@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 function void() {
 
 __init__

@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 function panes() {
 
     # panes.sh

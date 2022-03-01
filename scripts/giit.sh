@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 function giit() {
 
   # This script allows you to quickly commit, pull, or push in one command

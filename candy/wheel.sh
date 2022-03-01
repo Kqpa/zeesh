@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # Author: baskerville
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=288344#p288344
 
