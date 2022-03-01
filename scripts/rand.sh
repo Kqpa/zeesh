@@ -5,7 +5,7 @@
 
 function rand.sh() {
   
-  rand=$(echo $(( $RANDOM % 7 + 1 )))
+  rand=$(( $RANDOM % 7 + 1 ))
 
   case $rand in
     "1")
