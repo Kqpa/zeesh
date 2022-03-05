@@ -17,6 +17,4 @@ echo '\nsource ~/.shell-scripts/.main.sh\n' >> ~/.zshrc
 echo "[i] => Sourced scripts to ~/.zshrc."
 
 cd ~/.shell-scripts
-echo "[i] => Installed successfully."
-
-exec zsh
+echo "[i] => Installed successfully. Run 'source ~/.zshrc' to reload shell configuration."
