@@ -1,14 +1,20 @@
 # Aliases that doesn't belong to any category
 
-alias lsa='ls -lah --color=auto'
+alias v='vim'
+
+alias c='code'
+
+alias sudo='doas'
+
+alias _='doas'
 
 alias grep='grep --color=auto'
 
 alias mkdir='mkdir -pv'
 
-alias reboot='sudo reboot'
+alias reboot='doas reboot'
 
-alias shutdown='sudo shutdown now'
+alias shutdown='doas shutdown now'
 
 alias reload='source ~/.zshrc' 
 

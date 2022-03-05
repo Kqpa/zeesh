@@ -11,7 +11,7 @@ info_command='info'
 
 alias brup='$package_manager $update_command && $package_manager $upgrade_command' # Updates & Upgrades
 
-alias brupd='$package_manager $update_command' # Updates local packages
+alias brupd='$package_manager $update_command' # Updates packages
 
 alias brupg='$package_manager $upgrade_command' # Upgrades everything
 
@@ -23,4 +23,4 @@ alias brinf='$package_manager $info_command' # Gives information about package
 
 alias brclean='$package_manager $cleanup_command' # Cleans up packages 
 
-alias brewski='brew update && brew upgrade && brew cleanup; brew doctor' # This is an aliases exclusively for brew
+alias brewski='brew update && brew upgrade && brew cleanup && brew doctor' # This is an aliases exclusively for brew

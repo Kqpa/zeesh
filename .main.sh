@@ -1,5 +1,5 @@
 DIRECTORY=~/.shell-scripts # Default directory is `~/.shell-scripts`
-DEBUG="on" # on turns debug on, off turns debug off
+DEBUG="off" # on turns debug on, off turns debug off
 
 # Sources all of the scripts on the repository
 
