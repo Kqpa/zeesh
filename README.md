@@ -12,7 +12,7 @@
 
 ```sh
 # Make sure that you have cURL, zsh & git installed on your system
-curl -s "https://raw.githubusercontent.com/Kqpa/shell-scripts/master/.install.sh" | zsh
+zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/shell-scripts/master/.install.sh')"
 ```
 
 </div>
