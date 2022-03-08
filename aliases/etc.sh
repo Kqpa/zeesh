@@ -8,6 +8,8 @@ alias sudo='doas'
 
 alias _='doas'
 
+alias py='python3'
+
 alias grep='grep --color=auto'
 
 alias mkdir='mkdir -pv'

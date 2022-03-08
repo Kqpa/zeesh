@@ -1,12 +1,12 @@
 function ccp() {
 
-  # You can modify the `$file_extension` to the one you use, e.g. `.cc`, `.c`, etc...
-  # You can modify the `$compiler_command` to the command you use, e.g. `gcc`, `clang++`, etc...
+  # You can change the `$cpp_compiler` to the one you use, e.g. `clang++`, etc...
+  # You can change the `$c_compiler` to the one you use, e.g. `clang`, etc...
+  # Reload the shell configuration after you change these values
 
-  file_extension=".cpp"
-  compiler_command="g++"
+  cpp_compiler="g++"
 
-  # Reload your shell after you change these values
+  c_compiler="gcc"
 
 clear
 
@@ -15,22 +15,61 @@ clear
 
 clear
 
-  if [[ $file_name == *"$file_extension"* ]]; then
-    
-    echo "Compiling & executing" $file_name...
-    
-    output="$(basename ${file_name} ${file_extension})"
-    
-    $compiler_command -Wall $file_name -o $output && ./$output && rm -rf $output
-  
-  elif [[ $file_name != *"$file_extension"* ]]; then
-    
-    echo "Compiling & executing" $file_name$file_extension...
-    
+  if [[ $(basename $file_name) == *.* ]]; then
+
+    output=$(basename ${file_name} .${file_name#*.}).out
+
+    # You can add more compiler arguments if you'd like
+
+    if [[ .${file_name#*.} == .cpp || .${file_name#*.} == .cc || .${file_name#*.} == .C ||
+          .${file_name#*.} == .cxx || .${file_name#*.} == .c++ ]]; then
+
+      echo "Compiling & executing '$file_name'..."
+
+      $cpp_compiler -Wall -std=c++17 $file_name -o $output && ./$output && rm -f $output
+
+    elif [[ .${file_name#*.} == .c ]]; then
+
+      echo "Compiling & executing '$file_name'..."
+
+      $c_compiler -Wall -std=c17 $file_name -o $output && ./$output && rm -f $output
+
+    else
+
+      echo "Invalid file extension."
+
+    fi
+
+  elif [[ $(basename $file_name) == * ]]; then
+
+    preferable_file_extension=".cpp"
+
+    # The `$preferable_file_extension` is only used when a file extension is not specified
+    # For example, if you inputted `index` as the file, it would pass `index.($preferable_file_extension)` as the file to the compiler
+    # `$preferable_file_extension` can be any valid C or C++ file extension
+    # Reload shell configuration after you change the `$preferable_file_extension` variable
+
     output=$file_name
 
-    $compiler_command -Wall $file_name$file_extension -o $output && ./$output && rm -rf $output
-  
+    if [[ .${preferable_file_extension#*.} == .cpp || .${preferable_file_extension#*.} == .cc || .${preferable_file_extension#*.} == .C ||
+          .${preferable_file_extension#*.} == .cxx || .${preferable_file_extension#*.} == .c++ ]]; then
+
+      echo "Compiling & executing '$file_name' as C++..."
+
+      $cpp_compiler -Wall -std=c++17 $file_name$preferable_file_extension -o $output && ./$output && rm -f $output
+    
+    elif [[ .${preferable_file_extension#*.} == .c ]]; then
+
+      echo "Compiling & executing '$file_name' as C..."
+
+      $c_compiler -Wall -std=c17 $file_name$preferable_file_extension -o $output && ./$output && rm -f $output
+
+    else
+
+      echo "'preferable_file_extension' variable is invalid."
+
+    fi
+
   fi
 
 }
