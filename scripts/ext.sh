@@ -1,3 +1,6 @@
+# Author: Derek Taylor
+# Source: https://gitlab.com/dwt1/dotfiles/-/blob/master/.bashrc#L78
+
 function ext() {
   
   if [ -f $1 ] ; then  
@@ -16,7 +19,7 @@ function ext() {
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
       *.tar.zst)   unzstd $1    ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
+      *)           echo "'$1' cannot be extracted" ;;
     esac
   else
     echo "'$1' is not a valid file"
