@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 
-echo "[i] => Cloning the shell-scripts repository..."
+echo "[i] => Cloning 'zeesh'..."
 
-git clone https://github.com/Kqpa/shell-scripts .shell-scripts && cd ./.shell-scripts/
+git clone https://github.com/Kqpa/zeesh .zeesh && cd ./.zeesh/
 
-dir=$(pwd) && default="${HOME}/.shell-scripts"
+dir=$(pwd) && default="${HOME}/.zeesh"
 
 if [[ $dir != $default ]]; then
 
@@ -13,10 +13,10 @@ if [[ $dir != $default ]]; then
 
 fi
 
-echo '\nsource ~/.shell-scripts/.main.sh\n' >> ~/.zshrc
+echo '\nsource ~/.zeesh/.main.sh\n' >> ~/.zshrc
 echo "[i] => Sourced scripts to ~/.zshrc."
 
-cd ~/.shell-scripts
+cd ~/.zeesh
 echo "[i] => Installed successfully."
 
 exec zsh

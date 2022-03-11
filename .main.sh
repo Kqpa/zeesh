@@ -1,4 +1,4 @@
-DIRECTORY=~/.shell-scripts # Default directory is `~/.shell-scripts`
+DIRECTORY=~/.zeesh # Default directory is `~/.zeesh`
 DEBUG="off" # on turns debug on, off turns debug off
 
 # Sources all of the scripts on the repository

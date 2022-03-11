@@ -1,6 +1,6 @@
 <div align="center">
 
-# **Shell Scripts**
+# **zeesh**
 
 ```
 ▒▒▒▒ ▒▒   ▒▒▒▒ ▒▒   ▒▒▒▒ ▒▒
@@ -12,7 +12,7 @@
 
 ```sh
 # Make sure that you have cURL, zsh & git installed on your system
-zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/shell-scripts/master/.install.sh')"
+zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/zeesh/master/.install.sh')"
 ```
 
 </div>
@@ -27,8 +27,8 @@ If you want to disable a shell script or a whole directory, you can add a dot be
 
 ## Update
 
-  ```sh
-cd ~/.shell-scripts && git pull && source ~/.zshrc
+```sh
+cd ~/.zeesh && git stash && git pull && git stash pop && source ~/.zshrc
 ```
 
 </div>
