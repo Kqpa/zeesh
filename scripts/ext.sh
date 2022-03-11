@@ -1,7 +1,6 @@
-function ext () {
+function ext() {
   
-  if [ -f $1 ] ; then
-    
+  if [ -f $1 ] ; then  
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
@@ -19,11 +18,8 @@ function ext () {
       *.tar.zst)   unzstd $1    ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
-  
   else
-  
     echo "'$1' is not a valid file"
-  
   fi
 
 }
