@@ -1,10 +1,16 @@
-# Author: Derek Taylor
-# Source: https://gitlab.com/dwt1/dotfiles/-/blob/master/.bashrc#L78
+# Archive extractor
 
 function ext() {
   
-  if [ -f $1 ] ; then  
+  if [ -z $1 ]; then
+    
+    echo "usage: ext [file .tar.bz2 | .tar.gz | .bz2 | .rar | .gz | .tar | .tbz2"
+    echo "                 .tgz | .zip | .Z | .7z | .deb | .tar.xz | .tar.zst]"
+  
+  elif [ -f $1 ]; then
+  
     case $1 in
+  
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
@@ -19,10 +25,14 @@ function ext() {
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
       *.tar.zst)   unzstd $1    ;;
-      *)           echo "'$1' cannot be extracted" ;;
+      *)           echo "'$1' cannot be extracted via ext" ;;
+    
     esac
+  
   else
+  
     echo "'$1' is not a valid file"
+  
   fi
 
 }

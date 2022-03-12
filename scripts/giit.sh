@@ -1,20 +1,27 @@
+# Quickly handle simple git tasks such as committing and pushing
+
 function giit() {
 
-  # This script allows you to quickly commit, pull, or push in one command
-  # Feel free to customize it for your use
-
 clear
+
+  if [ ! -z $(git-branch-name) ]; then
   
-  if git rev-parse --abbrev-ref HEAD; then
-  
-    br=$(git rev-parse --abbrev-ref HEAD) && dir=$(pwd) 
-    clear && printf "[current: "${dir}" "on" "${br}"] \n"
+    echo "[current: "$(pwd)" "on" "$(git-branch-name)"]"
   
   else
   
-    dir=$(pwd) && clear && printf "[current: "${dir}", git not initialized] \n"
+    echo "[current: "$(pwd)", git not initialized]"
     printf "Repository path: " && read -r repository
-    if [ -z "$repository" ] ;then ;cd . ;else ;cd $repository ;fi
+    
+    if [[ ! -d "$repository" || -z "$repository" ]] ;then 
+    
+      echo "Not a valid path." && return
+    
+    else 
+    
+      cd $repository
+    
+    fi
   
   fi
 
@@ -41,5 +48,13 @@ clear
     git add . && git commit -m "$message" && git push 
   
   fi
+
+}
+
+function git-branch-name() { 
+    
+    branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}') 
+    
+    if [[ $branch == "" ]]; then : ;else echo "$branch"; fi 
 
 }
