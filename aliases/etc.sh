@@ -24,4 +24,4 @@ alias weather='curl "wttr.in"'
 
 alias mount='mount | column -t'
 
-alias cls='clear && rand.sh'
+alias cls='clear && rand'

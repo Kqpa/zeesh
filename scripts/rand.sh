@@ -1,7 +1,7 @@
 # Add this to your ~/.zshrc for a random color script from `../candy` on shell startup
-# `echo "rand.sh" >> ~/.zshrc`
+# echo "rand" >> ~/.zshrc
 
-function rand.sh() {
+function rand() {
   
   rand=$(( $RANDOM % 7 + 1 ))
 
