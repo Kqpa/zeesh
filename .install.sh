@@ -4,9 +4,9 @@ echo "[i] => Cloning 'zeesh'..."
 
 git clone https://github.com/Kqpa/zeesh .zeesh && cd ./.zeesh/
 
-dir=$(pwd) && default="${HOME}/.zeesh"
+default="${HOME}/.zeesh"
 
-if [[ $dir != $default ]]; then
+if [[ $(pwd) != $default ]]; then
 
     mv -f $dir $default
     echo "[i] => Moved repository to home directory."
@@ -14,7 +14,13 @@ if [[ $dir != $default ]]; then
 fi
 
 echo '\nsource ~/.zeesh/.main.sh\n' >> ~/.zshrc
-echo "[i] => Sourced scripts to ~/.zshrc."
+echo "[i] => Sourced repository to ~/.zshrc."
+
+printf "[?] => Display a random color script at shell startup? (y/n): " && read -r option
+
+if [ "$option" != "${option#[Yyes]}" ]; then
+    echo '\nrand\n' >> ~/.zshrc
+fi
 
 cd ~/.zeesh
 echo "[i] => Installed successfully."

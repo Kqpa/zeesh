@@ -1,7 +1,7 @@
 # Aliases for listing working directory contents
 
-alias l='ls -lh --color=auto'
+alias l='ls -Glh --color=auto'
 
-alias ll='ls -lah --color=auto'
+alias ll='ls -Glah --color=auto'
 
-alias ls='ls --color=auto'
+alias ls='ls -G --color=auto'

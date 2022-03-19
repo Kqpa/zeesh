@@ -1,4 +1,4 @@
-# Easily compiler & execute a C/C++ file in one command
+# Easily compile & execute a C/C++ file in one command
 
 function ccp() {
 

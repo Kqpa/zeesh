@@ -10,13 +10,15 @@ alias _='doas'
 
 alias py='python3'
 
+alias p='ping -c 5'
+
 alias grep='grep --color=auto'
 
 alias mkdir='mkdir -pv'
 
-alias reboot='doas reboot'
+alias reboot='sudo reboot'
 
-alias shutdown='doas shutdown now'
+alias shutdown='sudo shutdown now'
 
 alias reload='source ~/.zshrc' 
 
