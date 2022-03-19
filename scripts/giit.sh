@@ -13,7 +13,7 @@ clear
     echo "[current: "$(pwd)", git not initialized]"
     printf "Repository path: " && read -r repository
     
-    if [[ ! -d "$repository" || -z "$repository" ]] ;then 
+    if [[ ! -d "$repository" || -z "$repository" ]]; then 
     
       echo "Not a valid path." && return
     
@@ -31,19 +31,19 @@ clear
 
 clear
 
-  if [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Yyes]}" ]] ;then 
+  if [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Yyes]}" ]]; then 
   
     git add . && git pull && git commit -m "$message" && git push
   
-  elif [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Nno]}" ]] ;then 
+  elif [[ "$pull" != "${pull#[Yyes]}" && "$push" != "${push#[Nno]}" ]]; then 
   
     git add . && git pull && git commit -m "$message"
   
-  elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Nno]}" ]] ;then
+  elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Nno]}" ]]; then
   
     git add . && git commit -m "$message"
   
-  elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Yyes]}" ]] ;then
+  elif [[ "$pull" != "${pull#[Nno]}" && "$push" != "${push#[Yyes]}" ]]; then
   
     git add . && git commit -m "$message" && git push 
   

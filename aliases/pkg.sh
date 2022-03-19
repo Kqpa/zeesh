@@ -5,7 +5,7 @@ update_command="update"
 upgrade_command="upgrade"
 install_command="install"
 uninstall_command="remove"
-info_command='info'
+info_command="info"
 
 # Change the alias names to the ones you prefer
 

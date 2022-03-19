@@ -33,7 +33,7 @@ Individual shell scripts might require external dependencies if you want to use 
 >
 > **6**: `C/C++ Compiler` from [`./scripts/ccp.sh`](./scripts/ccp.sh) — a C/C++ complier is required to use this script
 >
-> **7**: `Archive Extractor` from [`./scripts/ext.sh`](./scripts/ext.sh) — some extractor commands might need to be additionally installed
+> **7**: `Archive Extractor` from [`./scripts/ext.sh`](./scripts/ext.sh) — some commands might need to be additionally installed
 
 <div align="center">
 

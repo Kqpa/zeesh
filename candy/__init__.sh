@@ -1,10 +1,10 @@
-# ANSI Color -- use these variables to easily have different color
-#    and format output. Make sure to output the reset sequence after 
-#    colors (f = foreground, b = background), and use the 'off'
-#    feature for anything you turn on.
-
 function __init__() {
-  
+
+    # ANSI Color -- use these variables to easily have different color
+    #    and format output. Make sure to output the reset sequence after 
+    #    colors (f = foreground, b = background), and use the 'off'
+    #    feature for anything you turn on.
+
   esc=""
 
   blackf="${esc}[30m";   redf="${esc}[31m";    greenf="${esc}[32m"
