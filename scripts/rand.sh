@@ -3,17 +3,18 @@
 
 function rand() {
   
-  rand=$(( $RANDOM % 7 + 1 ))
+  rand=$(( $RANDOM % 8 + 1 ))
 
   case $rand in
 
     "1")  crunch  ;;
-    "2")  mouse   ;;
-    "3")  panes   ;;
-    "4")  rails   ;;
-    "5")  squares ;;
-    "6")  void    ;;
-    "7")  wheel   ;;
+    "2")  dots    ;;
+    "3")  mouse   ;;
+    "4")  panes   ;;
+    "5")  rails   ;;
+    "6")  squares ;;
+    "7")  void    ;;
+    "8")  wheel   ;;
     *)    echo "An unexpected error occurred while executing a random shell color script." ;;
   
   esac

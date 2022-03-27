@@ -1,4 +1,4 @@
-DIRECTORY=~/.zeesh # Default directory is `~/.zeesh`
+DIRECTORY="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
 DEBUG="off" # on turns debug on, off turns debug off
 
 # Sources all of the scripts on the repository
@@ -9,7 +9,7 @@ for sh ($DIRECTORY/**/*.sh); do
   
     if [[ $DEBUG == "on" ]]; then
 
-      if [ -d "$DIRECTORY/.debug" ]; then; else; mkdir $DIRECTORY/.debug; fi
+      if [ ! -d "$DIRECTORY/.debug" ]; then; mkdir $DIRECTORY/.debug; fi
       
       touch $DIRECTORY/.debug/$UNIX_TIME.log
 
@@ -27,6 +27,6 @@ for sh ($DIRECTORY/**/*.sh); do
 
         fi
 
-    elif [[ $DEBUG == "off" ]]; then; source $sh; fi 
+    elif [[ $DEBUG == "off" ]]; then; source $sh; fi
 
 done

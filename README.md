@@ -50,7 +50,7 @@ If you want to disable a shell script or a whole directory, you can add a dot be
 ## Update
 
 ```sh
-cd ~/.zeesh && git stash && git pull && git stash pop && source ~/.zshrc
+cd ~/.zsh/zeesh && git stash && git pull && git stash pop && source ~/.zshrc
 ```
 
 </div>
