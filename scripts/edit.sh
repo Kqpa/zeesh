@@ -3,7 +3,7 @@
 function edit() {
 
 	if [[ -z "$1" ]]; then
-    	echo "usage: edit <executable>"
+    		echo "usage: edit <executable>"
 		return 0
 	elif [[ ! -f $(which $1) ]]; then
 		echo "edit: $1 is not a valid executable on '\$PATH'" 
