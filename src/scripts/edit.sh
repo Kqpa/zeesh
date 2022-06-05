@@ -3,7 +3,6 @@
 function edit() {
 
 	__EDIT_EXECUTABLE_FILE="$1"
-	__EDIT_EDITOR="vim"
 
 	if [[ -z "$__EDIT_EXECUTABLE_FILE" ]]; then
 

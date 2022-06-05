@@ -1,13 +1,4 @@
-# Package management aliases, change the variables accordingly
-
-__PACKAGE_MANAGER="brew" # If package manager requires root, add sudo before the name
-__UPDATE_COMMAND="update"
-__UPGRADE_COMMAND="upgrade"
-__INSTALL_COMMAND="install"
-__UNINSTALL_COMMAND="remove"
-__INFO_COMMAND="info"
-
-# Change the alias names to the ones you prefer
+# Package management aliases, change the alias names to the ones you prefer
 
 alias brup='$__PACKAGE_MANAGER $__UPDATE_COMMAND && $__PACKAGE_MANAGER $__UPGRADE_COMMAND' # Updates & Upgrades
 

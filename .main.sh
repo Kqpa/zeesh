@@ -1,7 +1,6 @@
-__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
-__ZEESH_DEBUG="off" # on turns debug on, off turns debug off
-
 # Sources all of the scripts on the repository
+__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
+source $__ZEESH_DIR/config.conf
 
 __ZEESH_DEBUG_FILE_NAME="zeesh-debug-$(date +%Y-%m-%d_%H-%M-%S)"
 
