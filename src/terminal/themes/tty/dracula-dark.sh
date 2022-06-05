@@ -1,8 +1,7 @@
-
-function __load_dark_dracula_tty() {
+function __load_dracula_dark_tty() {
 
     if [ "$TERM" = "linux" ]; then
-        
+
         printf %b '\e[40m' '\e[8]' # set default background to color 0 'dracula-bg'
         printf %b '\e[37m' '\e[8]' # set default foreground to color 7 'dracula-fg'
         printf %b '\e]P0282a36'    # redefine 'black'          as 'dracula-bg'
@@ -21,7 +20,7 @@ function __load_dark_dracula_tty() {
         printf %b '\e]PE97e2ff'    # redefine 'bright-cyan'    as '#97e2ff'
         printf %b '\e]P7f8f8f2'    # redefine 'white'          as 'dracula-fg'
         printf %b '\e]PFffffff'    # redefine 'bright-white'   as '#ffffff'
-        clear # For background artifacting
+        clear                      # For background artifacting
 
     fi
 

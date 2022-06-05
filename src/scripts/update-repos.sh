@@ -3,26 +3,22 @@
 
 function update-repos() {
 
-    printf "[\e[32m?\033[0m]: Update every repository inside the directory '\e[32m$(basename "$PWD")\033[0m'? [\e[32mYes\033[0m/\e[31mNo\033[0m]: " && read -r __UPDATE_REPO_OPTION
+    __ZEESH_UPDATEREPO_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mupdate-repos\033[0m]:"
 
-    if [ "$__UPDATE_REPO_OPTION" != "${__UPDATE_REPO_OPTION#[Yyes]}" ]; then
-    
-        for __REPO_DIR in */.git/refs/remotes; do 
+    for __REPO_DIR in */.git/refs/remotes; do 
         
-            (
+        (
 
-                cd $__REPO_DIR/../../..
+            cd $__REPO_DIR/../../..
                 
-                echo "\e[32m==>\033[0m Pulling contents from remote for '\e[32m$(dirname $(dirname $(dirname $__REPO_DIR)))\033[0m'..." 
+            echo "$__ZEESH_UPDATEREPO_INFO pulling contents from remote for '\e[32m$(dirname $(dirname $(dirname $__REPO_DIR)))\033[0m'..." 
 
-                if ! git pull; then
-                    echo "\e[31m[FAILED]:\033[0m Failed to pull contents from remote for '\e[31m$(dirname $(dirname $(dirname $__REPO_DIR)))\033[0m'"
-                fi
+            if ! git pull; then
+                echo "$__ZEESH_UPDATEREPO_INFO failed to pull contents from remote for '\e[31m$(dirname $(dirname $(dirname $__REPO_DIR)))\033[0m'"
+            fi
 
-            );
+        );
         
-        done
-    
-    else; echo "Abort."; fi
+    done
 
 }

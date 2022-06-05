@@ -3,14 +3,15 @@
 function edit() {
 
 	__EDIT_EXECUTABLE_FILE="$1"
+	__ZEESH_EDIT_INFO="[\e[32mzeesh\u001b[0m::\u001b[32medit\033[0m]:"
 
 	if [[ -z "$__EDIT_EXECUTABLE_FILE" ]]; then
 
-		echo "usage: edit <executable>" && return 0
+		echo "$__ZEESH_EDIT_INFO edit <executable>" && return 0
 	
 	elif [[ ! -f $(which $__EDIT_EXECUTABLE_FILE) ]]; then
 	
-		echo "edit: '$__EDIT_EXECUTABLE_FILE' is not a valid executable on '\$PATH'" && return 1
+		echo "$__ZEESH_EDIT_INFO '$__EDIT_EXECUTABLE_FILE': not a valid executable on '\$PATH'" && return 1
 	
 	fi
 
@@ -32,7 +33,7 @@ function edit() {
 	
 	else
 	
-		echo "edit: $__EDIT_EXECUTABLE_FILE: Not a valid file format" && return 1
+		echo "$__ZEESH_EDIT_INFO $__EDIT_EXECUTABLE_FILE: not a valid file format" && return 1
 	
 	fi
 }

@@ -1,4 +1,4 @@
-# `git` aliasesa
+# Git aliases
 
 alias addup='git add -u'
 

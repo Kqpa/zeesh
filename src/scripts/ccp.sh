@@ -3,10 +3,11 @@
 function ccp() {
 
   __FILE_NAME="$1"
+  __ZEESH_CCP_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mccp\033[0m]:"
 
   if [ -z "$__FILE_NAME" ]; then
     
-    echo "usage: ccp [file .cpp | .cc | .C | .cxx | .c++ | .c]"
+    echo "$__ZEESH_CCP_INFO ccp file <.cpp | .cc | .C | .cxx | .c++ | .c>"
 
   else
 
@@ -19,19 +20,19 @@ function ccp() {
       if [[ .${__FILE_NAME#*.} == .cpp || .${__FILE_NAME#*.} == .cc || .${__FILE_NAME#*.} == .C ||
             .${__FILE_NAME#*.} == .cxx || .${__FILE_NAME#*.} == .c++ ]]; then
 
-        echo "ccp: compiling & executing '$__FILE_NAME'..."
+        echo "$__ZEESH_CCP_INFO compiling & executing '$__FILE_NAME'..."
 
         $__CPP_COMPILER -Wall -std=c++17 $__FILE_NAME -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
 
       elif [[ .${__FILE_NAME#*.} == .c ]]; then
 
-        echo "ccp: compiling & executing '$__FILE_NAME'..."
+        echo "$__ZEESH_CCP_INFO compiling & executing '$__FILE_NAME'..."
 
         $__C_COMPILER -Wall -std=c17 $__FILE_NAME -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
 
       else
 
-        echo "ccp: ${__FILE_NAME#*.}: invalid file extension."
+        echo "$__ZEESH_CCP_INFO ${__FILE_NAME#*.}: invalid file extension"
 
       fi
 
@@ -42,19 +43,19 @@ function ccp() {
       if [[ .${__PREFERABLE_FILE_EXTENSION#*.} == .cpp || .${__PREFERABLE_FILE_EXTENSION#*.} == .cc || .${__PREFERABLE_FILE_EXTENSION#*.} == .C ||
             .${__PREFERABLE_FILE_EXTENSION#*.} == .cxx || .${__PREFERABLE_FILE_EXTENSION#*.} == .c++ ]]; then
 
-        echo "ccp: compiling & executing '$__FILE_NAME' as C++..."
+        echo "$__ZEESH_CCP_INFO compiling & executing '$__FILE_NAME' as C++..."
 
         $__CPP_COMPILER -Wall -std=c++17 $__FILE_NAME$__PREFERABLE_FILE_EXTENSION -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
       
       elif [[ .${__PREFERABLE_FILE_EXTENSION#*.} == .c ]]; then
 
-        echo "ccp: compiling & executing '$file_name' as C..."
+        echo "$__ZEESH_CCP_INFO compiling & executing '$file_name' as C..."
 
         $__C_COMPILER -Wall -std=c17 $__FILE_NAME$__PREFERABLE_FILE_EXTENSION -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
 
       else
 
-        echo "ccp: $__PREFERABLE_FILE_EXTENSION: not a valid file extension."
+        echo "$__ZEESH_CCP_INFO $__PREFERABLE_FILE_EXTENSION: not a valid file extension"
 
       fi
 

@@ -3,11 +3,12 @@
 function ext() {
 
   __EXTRACTION_FILE="$1"
+  __ZEESH_EXT_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mext\033[0m]:"
   
   if [ -z $__EXTRACTION_FILE ]; then
     
-    echo "usage: ext [file .tar.bz2 | .tar.gz | .bz2 | .rar | .gz | .tar | .tbz2"
-    echo "                 .tgz | .zip | .Z | .7z | .deb | .tar.xz | .tar.zst]"
+    echo "$__ZEESH_EXT_INFO ext file <.tar.bz2 | .tar.gz | .bz2 | .rar | .gz | .tar | .tbz2"
+    echo "                        .tgz | .zip | .Z | .7z | .deb | .tar.xz | .tar.zst>"
   
   elif [ -f $__EXTRACTION_FILE ]; then
   
@@ -27,13 +28,13 @@ function ext() {
       *.deb)       ar x $__EXTRACTION_FILE       ;;
       *.tar.xz)    tar xf $__EXTRACTION_FILE     ;;
       *.tar.zst)   unzstd $__EXTRACTION_FILE     ;;
-      *)           echo "'$__EXTRACTION_FILE' cannot be extracted via ext" ;;
+      *)           echo "$__ZEESH_EXT_INFO '$__EXTRACTION_FILE': cannot be extracted via ext" ;;
     
     esac
   
   else
   
-    echo "'$__EXTRACTION_FILE' is not a valid file"
+    echo "$__ZEESH_EXT_INFO '$__EXTRACTION_FILE': not a valid file"
   
   fi
 

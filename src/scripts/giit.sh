@@ -2,51 +2,47 @@
 
 function giit() {
 
-clear
+  __ZEESH_GIIT_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mgiit\033[0m]:"
+  __GIT_MESSAGE="$1"
+  __GIT_PULL="$2"
+  __GIT_PUSH="$3"
 
-  if [ ! -z $(git-branch-name) ]; then
-  
-    echo "[current: "$(pwd)" "on" "$(git-branch-name)"]"
-  
+  if [ -z $(__git_branch_name) ]; then
+
+    echo "$__ZEESH_GIIT_INFO not a valid git repository" && return 1
+
+  elif [[ -z $__GIT_MESSAGE || -z $__GIT_PULL || -z $__GIT_PUSH ]]; then
+    
+    echo "$__ZEESH_GIIT_INFO giit <message> <pull [y/n]> <push [y/n]>" && return
+
   else
-  
-    echo "[current: "$(pwd)", git not initialized]"
-    printf "Repository path: " && read -r __GIT_REPOSITORY
+
+    if [[ "$__GIT_PULL" != "${__GIT_PULL#[Yyes]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Yyes]}" ]]; then 
     
-    if [[ ! -d "$__GIT_REPOSITORY" || -z "$__GIT_REPOSITORY" ]]; then 
+      git add . && git pull && git commit -m "$__GIT_MESSAGE" && git push
     
-      echo "Not a valid path." && return
+    elif [[ "$__GIT_PULL" != "${__GIT_PULL#[Yyes]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Nno]}" ]]; then 
     
-    else 
+      git add . && git pull && git commit -m "$__GIT_MESSAGE"
     
-      cd $__GIT_REPOSITORY
+    elif [[ "$__GIT_PULL" != "${__GIT_PULL#[Nno]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Nno]}" ]]; then
+    
+      git add . && git commit -m "$__GIT_MESSAGE"
+    
+    elif [[ "$__GIT_PULL" != "${__GIT_PULL#[Nno]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Yyes]}" ]]; then
+    
+      git add . && git commit -m "$__GIT_MESSAGE" && git push 
     
     fi
-  
+
   fi
 
-  printf "Pull changes before committing (y/n): " && read -r __GIT_PULL
-  printf "Commit message: " && read -r __GIT_MESSAGE
-  printf "Push changes (y/n): " && read -r __GIT_PUSH
+}
 
-clear
-
-  if [[ "$__GIT_PULL" != "${__GIT_PULL#[Yyes]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Yyes]}" ]]; then 
-  
-    git add . && git pull && git commit -m "$__GIT_MESSAGE" && git push
-  
-  elif [[ "$__GIT_PULL" != "${__GIT_PULL#[Yyes]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Nno]}" ]]; then 
-  
-    git add . && git pull && git commit -m "$__GIT_MESSAGE"
-  
-  elif [[ "$__GIT_PULL" != "${__GIT_PULL#[Nno]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Nno]}" ]]; then
-  
-    git add . && git commit -m "$__GIT_MESSAGE"
-  
-  elif [[ "$__GIT_PULL" != "${__GIT_PULL#[Nno]}" && "$__GIT_PUSH" != "${__GIT_PUSH#[Yyes]}" ]]; then
-  
-    git add . && git commit -m "$__GIT_MESSAGE" && git push 
-  
-  fi
+function __git_branch_name() { 
+    
+    __GIT_BRANCH=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}') 
+    
+    if [[ $__GIT_BRANCH == "" ]]; then : ;else echo "$__GIT_BRANCH"; fi 
 
 }

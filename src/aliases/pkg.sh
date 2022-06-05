@@ -1,4 +1,5 @@
 # Package management aliases, change the alias names to the ones you prefer
+# Package manager variables are located in the configuration file on the root of the project.
 
 alias brup='$__PACKAGE_MANAGER $__UPDATE_COMMAND && $__PACKAGE_MANAGER $__UPGRADE_COMMAND' # Updates & Upgrades
 

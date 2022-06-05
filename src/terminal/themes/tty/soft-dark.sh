@@ -1,9 +1,7 @@
-# TTY themeing
-
 function __load_soft_dark_tty() {
 
     if [ "$TERM" = "linux" ]; then
-        
+
         echo -en "\e]P0232323" # Black
         echo -en "\e]P82B2B2B" # Dark grey
         echo -en "\e]P1D75F5F" # Dark red
@@ -20,7 +18,7 @@ function __load_soft_dark_tty() {
         echo -en "\e]PE44C9C9" # Cyan
         echo -en "\e]P7E5E5E5" # Lightgrey
         echo -en "\e]PFFFFFFF" # White
-        clear # For background artifacting
+        clear                  # For background artifacting
 
     fi
 

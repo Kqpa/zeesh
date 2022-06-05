@@ -1,4 +1,7 @@
-__ZSH_PROMPT="random"
+
+# config file wip gonna get docs soon or later
+
+__ZSH_PROMPT="minimal"
 __TTY_THEME="soft-dark"
 __CLASSIC_PROMPT_ACCENT_COLOR="blue"
 __PACKAGE_MANAGER="brew" # If package manager requires root, add sudo before the name
@@ -16,13 +19,13 @@ __COLOR_TEST_TEXT='Text' # The test text
   # For example, if you inputted `index` as the file, it would pass `index.$__PREFERABLE_FILE_EXTENSION` as the file to the compiler
   # `$__PREFERABLE_FILE_EXTENSION` can be any valid C or C++ file extension
 
-  __PREFERABLE_FILE_EXTENSION=".cpp"
+__PREFERABLE_FILE_EXTENSION=".cpp"
 
-  __CPP_COMPILER="g++"
+__CPP_COMPILER="g++"
 
-  __C_COMPILER="gcc"
+__C_COMPILER="gcc"
 
-	__EDIT_EDITOR="vim"
-    __ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
+__EDIT_EDITOR="vim"
+__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
 __ZEESH_DEBUG="off" # on turns debug on, off turns debug off
 
