@@ -1,32 +1,32 @@
-DIRECTORY="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
-DEBUG="off" # on turns debug on, off turns debug off
+__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
+__ZEESH_DEBUG="off" # on turns debug on, off turns debug off
 
 # Sources all of the scripts on the repository
 
-UNIX_TIME=$(date '+%s')
+__ZEESH_DEBUG_FILE_NAME="zeesh-debug-$(date +%Y-%m-%d_%H-%M-%S)"
 
-for sh ($DIRECTORY/**/*.sh); do
+for sh ($__ZEESH_DIR/**/*.sh); do
   
-    if [[ $DEBUG == "on" ]]; then
+    if [[ $__ZEESH_DEBUG == "on" ]]; then
 
-      if [ ! -d "$DIRECTORY/.debug" ]; then; mkdir $DIRECTORY/.debug; fi
+      if [ ! -d "$__ZEESH_DIR/.debug" ]; then; mkdir $__ZEESH_DIR/.debug; fi
       
-      touch $DIRECTORY/.debug/$UNIX_TIME.log
+      touch $__ZEESH_DIR/.debug/$__ZEESH_DEBUG_FILE_NAME.log
 
         if source $sh; then
         
-          echo "[SHELL: '$(basename ${SHELL:u})'] - [LOGFILE: '$UNIX_TIME'] - [LOADED: '$(basename $sh)' from '$(basename $(dirname $sh))']" >> $DIRECTORY/.debug/$UNIX_TIME.log
+          echo "[SHELL: '$(basename ${SHELL:u})'] - [LOGFILE: '$__ZEESH_DEBUG_FILE_NAME'] - [LOADED: '$(basename $sh)' from '$(basename $(dirname $sh))']" >> $__ZEESH_DIR/.debug/$__ZEESH_DEBUG_FILE_NAME.log
         
         else
 
-          echo "\n<------------>" >> $DIRECTORY/.debug/$UNIX_TIME.log
-          echo "[SHELL: '$(basename ${SHELL:u})'] - [LOGFILE: '$UNIX_TIME'] - [FAILED TO LOAD: '$(basename $sh)' from '$(basename $(dirname $sh))']" >> $DIRECTORY/.debug/$UNIX_TIME.log
-          printf "ERROR: " >> $DIRECTORY/.debug/$UNIX_TIME.log
-          source $sh &>> $DIRECTORY/.debug/$UNIX_TIME.log
-          echo "<------------>\n" >> $DIRECTORY/.debug/$UNIX_TIME.log
+          echo "\n<------------>" >> $__ZEESH_DIR/.debug/$__ZEESH_DEBUG_FILE_NAME.log
+          echo "[SHELL: '$(basename ${SHELL:u})'] - [LOGFILE: '$__ZEESH_DEBUG_FILE_NAME'] - [FAILED TO LOAD: '$(basename $sh)' from '$(basename $(dirname $sh))']" >> $__ZEESH_DIR/.debug/$__ZEESH_DEBUG_FILE_NAME.log
+          printf "ERROR: " >> $__ZEESH_DIR/.debug/$__ZEESH_DEBUG_FILE_NAME.log
+          source $sh &>> $__ZEESH_DIR/.debug/$__ZEESH_DEBUG_FILE_NAME.log
+          echo "<------------>\n" >> $__ZEESH_DIR/.debug/$__ZEESH_DEBUG_FILE_NAME.log
 
         fi
 
-    elif [[ $DEBUG == "off" ]]; then; source $sh; fi
+    elif [[ $__ZEESH_DEBUG == "off" ]]; then; source $sh; fi
 
 done

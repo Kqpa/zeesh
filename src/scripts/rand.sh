@@ -1,11 +1,10 @@
-# Add this to your ~/.zshrc for a random color script from `../candy` on shell startup
-# echo "rand" >> ~/.zshrc
+# Prints a random color script
 
-function rand() {
+function random-candy() {
   
-  rand=$(( $RANDOM % 8 + 1 ))
+  __RANDOM_CANDY=$(( $RANDOM % 8 + 1 ))
 
-  case $rand in
+  case $__RANDOM_CANDY in
 
     "1")  crunch  ;;
     "2")  dots    ;;

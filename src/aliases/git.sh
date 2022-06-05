@@ -1,4 +1,4 @@
-# An automated git shell script is located at ../scripts/giit.sh. This is made for individual tasks
+# `git` aliasesa
 
 alias addup='git add -u'
 

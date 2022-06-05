@@ -10,8 +10,6 @@ alias _='doas'
 
 alias py='python3'
 
-alias p='ping -c 5'
-
 alias grep='grep --color=auto'
 
 alias mkdir='mkdir -pv'
@@ -26,4 +24,4 @@ alias weather='curl "wttr.in"'
 
 alias mount='mount | column -t'
 
-alias cls='clear && rand'
+alias cls='clear && random-candy'
