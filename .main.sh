@@ -1,5 +1,8 @@
 # Sources all of the scripts on the repository
-__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
+#__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
+__ZEESH_DIR="${${(%):-%x}%/*}"
+__ZEESH_VERSION="0.1.4"
+
 source $__ZEESH_DIR/config.sh
 
 __ZEESH_DEBUG_FILE_NAME="zeesh-debug-$(date +%Y-%m-%d_%H-%M-%S)"

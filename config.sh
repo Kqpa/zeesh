@@ -26,6 +26,5 @@ __CPP_COMPILER="g++"
 __C_COMPILER="gcc"
 
 __EDIT_EDITOR="vim"
-__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
 __ZEESH_DEBUG="off" # on turns debug on, off turns debug off
 
