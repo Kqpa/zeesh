@@ -28,4 +28,4 @@ __C_COMPILER="gcc"
 __EDIT_EDITOR="vim"
 __ZEESH_DEBUG="off" # on turns debug on, off turns debug off
 
-# zeesh::zeesh update test
+# zeesh::zeesh update test test pt2
