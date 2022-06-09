@@ -55,7 +55,9 @@ function zeesh() {
                 
             done < ".zshrc" > .zshrc.temp
 
-            rm -f .zshrc && mv .zshrc.temp .zshrc            
+            rm -f .zshrc && mv .zshrc.temp .zshrc && rm -rf $__ZEESH_DIR
+
+            echo "$__ZEESH_ZEESH_INFO uninstalled 'zeesh'"      
             
         ;;
         
