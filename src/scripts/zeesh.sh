@@ -5,11 +5,17 @@ function zeesh() {
 
     if [[ -z "$__ZEESH_OPTION" ]]; then
 
-        echo "$__ZEESH_ZEESH_INFO zeesh <info | update | uninstall>" && return
+        echo "$__ZEESH_ZEESH_INFO zeesh <info | config | update | uninstall>" && return
 
     fi
 
     case $__ZEESH_OPTION in
+
+        "config")
+
+            $__EDIT_EDITOR $__ZEESH_DIR/config.sh
+
+        ;;
 
         "update")
 
@@ -39,7 +45,7 @@ function zeesh() {
 
         "uninstall")
 
-            echo "$__ZEESH_ZEESH_INFO: backing up '~/.zshrc' under '~/.zshrc.backup'"
+            echo "$__ZEESH_ZEESH_INFO backing up '~/.zshrc' under '~/.zshrc.backup'"
 
             cp .zshrc .zshrc.backup
         
