@@ -1,4 +1,4 @@
-# Asks for confirmation if you're overwriting a file
+# Asks for confirmation
 
 alias mv='mv -i'
 

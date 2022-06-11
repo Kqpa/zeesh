@@ -35,11 +35,13 @@ function zeesh() {
             echo "  /___\___|\___||___/_| |_| \e[1mv$__ZEESH_VERSION\e[0m"
             echo "                           "
             printf "\u001b[0m"
-            echo "\e[32;1mInstallation Path\e[0m:     ${(D)__ZEESH_DIR}"
-            echo "\e[32;1mzeesh Version\e[0m:         $__ZEESH_VERSION"
-            echo "\e[32;1mzsh Version\e[0m:           $(zsh --version)"
-            echo "\e[32;1mGitHub Repository\e[0m:     https://github.com/Kqpa/zeesh"
-            echo "\e[32;1mContact\e[0m:               kqpa@pm.me"
+            echo " \e[32;1mInstallation Path\e[0m  ${__BOLDON}|${__BOLDOFF} ${(D)__ZEESH_DIR}"
+            echo " \e[32;1mzeesh Version\e[0m      ${__BOLDON}|${__BOLDOFF} $__ZEESH_VERSION"
+            echo " \e[32;1mzsh Version\e[0m        ${__BOLDON}|${__BOLDOFF} $(zsh --version)"
+            echo " \e[32;1mGitHub Repository\e[0m  ${__BOLDON}|${__BOLDOFF} https://github.com/Kqpa/zeesh"
+            echo " \e[32;1mBug Reports\e[0m        ${__BOLDON}|${__BOLDOFF} https://github.com/Kqpa/zeesh/issues"
+            echo " \e[32;1mContact\e[0m            ${__BOLDON}|${__BOLDOFF} kqpa@pm.me"
+            printf "\n"
 
         ;;
 

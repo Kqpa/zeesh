@@ -1,7 +1,7 @@
 # Sources all of the scripts on the repository
 #__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
 __ZEESH_DIR="${${(%):-%x}%/*}"
-__ZEESH_VERSION="0.1.4"
+__ZEESH_VERSION="0.1.4" # Don't forget to change this value at `config.sh`
 
 source $__ZEESH_DIR/config.sh
 

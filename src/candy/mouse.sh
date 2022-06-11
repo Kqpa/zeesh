@@ -1,12 +1,11 @@
+# mouse.sh
+#    █   █  █   █  █   █  █   █  █   █  █   █  
+#     ■ ■    ■ ■    ■ ■    ■ ■    ■ ■    ■ ■  
+#     =■=    =■=    =■=    =■=    =■=    =■= 
 # Author: ivo    
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=130522#p130522
 
 function mouse() {
-
-    # mouse.sh
-    #    █   █  █   █  █   █  █   █  █   █  █   █  
-    #     ■ ■    ■ ■    ■ ■    ■ ■    ■ ■    ■ ■  
-    #     =■=    =■=    =■=    =■=    =■=    =■=  
 
 cat << EOF 
 

@@ -1,7 +1,7 @@
-function color-test() {
+# Prints out ANSI colors to the terminal
+# You can use this to test your terminal colors
 
-    # color-test.sh
-    # Prints out ANSI colors to the terminal
+function color-test() {
 
   echo -e "\n                 40m     41m     42m     43m\
       44m     45m     46m     47m";

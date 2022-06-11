@@ -4,9 +4,13 @@ alias v='vim'
 
 alias c='code'
 
-alias sudo='doas'
+if [[ $__DISABLE_DOAS == "false" ]]; then
 
-alias _='doas'
+    alias sudo='doas'
+
+    alias _='doas'
+
+fi
 
 alias py='python3'
 

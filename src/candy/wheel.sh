@@ -1,14 +1,13 @@
+# wheel.sh
+#   ||||||
+# ||||||||||
+# ||||||||||
+# ||||||||||
+#   ||||||
 # Author: baskerville
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=288344#p288344
 
 function wheel() {
-
-      # wheel.sh
-      #   ||||||
-      # ||||||||||
-      # ||||||||||
-      # ||||||||||
-      #   ||||||
 
 printf "\033[0m
      \033[49;35m|\033[49;31m|\033[101;31m|\033[41;97m|\033[49;91m|\033[49;93m|\033[0m

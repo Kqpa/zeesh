@@ -1,12 +1,11 @@
+# squares.sh
+#   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀ 
+#   ██   ██   ██   ██   ██   ██   ██   ██   ██   ██   ██   ██  
+#   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄
 # Author: muzieca
 # Source: http://crunchbang.org/forums/viewtopic.php?pid=127509#p127509
 
 function squares() {
-
-    # squares.sh
-    #   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀   ▀ █ █ ▀ 
-    #   ██   ██   ██   ██   ██   ██   ██   ██   ██   ██   ██   ██  
-    #   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄   ▄ █ █ ▄
 
 cat << EOF
 
