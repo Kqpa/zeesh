@@ -1,7 +1,7 @@
 function zeesh() {
 
     __ZEESH_OPTION="$1"
-    __ZEESH_ZEESH_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mzeesh\033[0m]:"
+    __ZEESH_ZEESH_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}]:"
 
     if [[ -z "$__ZEESH_OPTION" ]]; then
 
@@ -25,31 +25,31 @@ function zeesh() {
 
         "info")
 
-            printf "\u001b[31m"
+            printf "${fg[red]}"
             echo "                     _      "
             echo "   _______  ___  ___| |__   "
             echo "  |_  / _ \/ _ \/ __| '_ \  "
-            printf "\u001b[32m"
+            printf "${fg[green]}"
             echo "   / /  __/  __/\__ \ | | | "
-            printf "\u001b[34m"
-            echo "  /___\___|\___||___/_| |_| \e[1mv$__ZEESH_VERSION\e[0m"
+            printf "${fg[blue]}"
+            echo "  /___\___|\___||___/_| |_| ${fg_bold[$__ZEESH_ACCENT_COLOR]}$__ZEESH_VERSION${reset_color}"
             echo "                           "
-            printf "\u001b[0m"
-            echo " \e[32;1mInstallation Path\e[0m  ${__BOLDON}|${__BOLDOFF} ${(D)__ZEESH_DIR}"
-            echo " \e[32;1mzeesh Version\e[0m      ${__BOLDON}|${__BOLDOFF} $__ZEESH_VERSION"
-            echo " \e[32;1mzsh Version\e[0m        ${__BOLDON}|${__BOLDOFF} $(zsh --version)"
-            echo " \e[32;1mGitHub Repository\e[0m  ${__BOLDON}|${__BOLDOFF} https://github.com/Kqpa/zeesh"
-            echo " \e[32;1mBug Reports\e[0m        ${__BOLDON}|${__BOLDOFF} https://github.com/Kqpa/zeesh/issues"
-            echo " \e[32;1mContact\e[0m            ${__BOLDON}|${__BOLDOFF} kqpa@pm.me"
+            printf "${reset_color}"
+            echo " ${fg[$__ZEESH_ACCENT_COLOR]}Installation Path${reset_color}  ${__BOLDON}|${__BOLDOFF} ${(D)__ZEESH_DIR}"
+            echo " ${fg[$__ZEESH_ACCENT_COLOR]}zeesh Version${reset_color}      ${__BOLDON}|${__BOLDOFF} $__ZEESH_VERSION"
+            echo " ${fg[$__ZEESH_ACCENT_COLOR]}zsh Version${reset_color}        ${__BOLDON}|${__BOLDOFF} $(zsh --version)"
+            echo " ${fg[$__ZEESH_ACCENT_COLOR]}GitHub Repository${reset_color}  ${__BOLDON}|${__BOLDOFF} https://github.com/Kqpa/zeesh"
+            echo " ${fg[$__ZEESH_ACCENT_COLOR]}Bug Reports${reset_color}        ${__BOLDON}|${__BOLDOFF} https://github.com/Kqpa/zeesh/issues"
+            echo " ${fg[$__ZEESH_ACCENT_COLOR]}Contact${reset_color}            ${__BOLDON}|${__BOLDOFF} kqpa@pm.me"
             printf "\n"
 
         ;;
 
         "uninstall")
 
-            echo "$__ZEESH_ZEESH_INFO backing up '~/.zshrc' under '~/.zshrc.backup'"
+            echo "$__ZEESH_ZEESH_INFO backing up '~/.zshrc' under '~/.zshrc.zeesh-backup'"
 
-            cp .zshrc .zshrc.backup
+            cp "$HOME/.zshrc" "$HOME/.zshrc.zeesh-backup"
         
             while IFS= read -r line; do 
                 
@@ -61,11 +61,13 @@ function zeesh() {
                 
                 esac
                 
-            done < ".zshrc" > .zshrc.temp
+            done < "$HOME/.zshrc" > "$HOME/.zshrc.zeesh-temp"
 
-            rm -f .zshrc && mv .zshrc.temp .zshrc && rm -rf $__ZEESH_DIR
+            rm -f "$HOME/.zshrc" && \
+            mv "$HOME/.zshrc.zeesh-temp" "$HOME/.zshrc" && \
+            rm -rf "$__ZEESH_DIR"
 
-            echo "$__ZEESH_ZEESH_INFO uninstalled 'zeesh'"      
+            echo "$__ZEESH_ZEESH_INFO uninstalled zeesh, re-start your shell"
             
         ;;
         

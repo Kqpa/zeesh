@@ -2,7 +2,7 @@
 
 function writeln() {
 
-    __ZEESH_WRITELN_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mwriteln\033[0m]:"
+    __ZEESH_WRITELN_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}writeln${reset_color}]:"
 	__WRITELN_FILE_NAME="$1"
 	__WRITELN_TEXT="$2"
 

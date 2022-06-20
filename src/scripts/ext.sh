@@ -3,7 +3,7 @@
 function ext() {
 
   __EXTRACTION_FILE="$1"
-  __ZEESH_EXT_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mext\033[0m]:"
+  __ZEESH_EXT_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}ext${reset_color}]:"
   
   if [ -z $__EXTRACTION_FILE ]; then
     

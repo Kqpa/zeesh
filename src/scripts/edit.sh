@@ -3,7 +3,7 @@
 function edit() {
 
 	__EDIT_EXECUTABLE_FILE="$1"
-	__ZEESH_EDIT_INFO="[\e[32mzeesh\u001b[0m::\u001b[32medit\033[0m]:"
+	__ZEESH_EDIT_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}edit${reset_color}]:"
 
 	if [[ -z "$__EDIT_EXECUTABLE_FILE" ]]; then
 

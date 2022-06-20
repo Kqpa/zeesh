@@ -3,7 +3,7 @@
 function ccp() {
 
   __FILE_NAME="$1"
-  __ZEESH_CCP_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mccp\033[0m]:"
+  __ZEESH_CCP_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}ccp${reset_color}]:"
 
   if [ -z "$__FILE_NAME" ]; then
     

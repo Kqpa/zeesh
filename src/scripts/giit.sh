@@ -2,7 +2,7 @@
 
 function giit() {
 
-  __ZEESH_GIIT_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mgiit\033[0m]:"
+  __ZEESH_GIIT_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}giit${reset_color}]:"
   __GIT_MESSAGE="$1"
   __GIT_PULL="$2"
   __GIT_PUSH="$3"

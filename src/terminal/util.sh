@@ -1,7 +1,3 @@
-autoload -U colors && colors
-
-setopt prompt_subst
-
 __ZEESH_UTIL_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mutil\033[0m]:"
 
 case $__ZSH_PROMPT in

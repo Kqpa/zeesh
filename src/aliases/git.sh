@@ -1,25 +1,25 @@
 # Git aliases
 
-alias addup='git add -u'
+alias gaddup='git add -u'
 
-alias addall='git add .'
+alias gaddall='git add .'
 
-alias branch='git branch'
+alias gbranch='git branch'
 
-alias checkout='git checkout'
+alias gcheckout='git checkout'
 
-alias clone='git clone'
+alias gclone='git clone'
 
-alias commit='git commit -m'
+alias gcommit='git commit -m'
 
-alias fetch='git fetch'
+alias gfetch='git fetch'
 
-alias pull='git pull origin'
+alias gpull='git pull origin'
 
-alias push='git push origin'
+alias gpush='git push origin'
 
-alias stat='git status'
+alias gstat='git status'
 
-alias tag='git tag'
+alias gtag='git tag'
 
-alias newtag='git tag -a'
+alias gnewtag='git tag -a'

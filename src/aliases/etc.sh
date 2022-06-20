@@ -4,7 +4,7 @@ alias v='vim'
 
 alias c='code'
 
-if [[ $__DISABLE_DOAS == "false" ]]; then
+if [[ $__DISABLE_DOAS == "off" ]]; then
 
     alias sudo='doas'
 
@@ -23,9 +23,5 @@ alias reboot='sudo reboot'
 alias shutdown='sudo shutdown now'
 
 alias reload='source ~/.zshrc' 
-
-alias weather='curl "wttr.in"'
-
-alias mount='mount | column -t'
 
 alias cls='clear && random-candy'

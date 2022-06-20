@@ -2,9 +2,11 @@
 #__ZEESH_DIR="${HOME}/.zsh/zeesh" # Default directory is `~/.zsh/zeesh`
 __ZEESH_DIR="${${(%):-%x}%/*}"
 __ZEESH_VERSION="0.1.4" # Don't forget to change this value at `config.sh`
+autoload -U colors && colors
 
+setopt prompt_subst
+source $__ZEESH_DIR/src/candy/ansi-init.sh
 source $__ZEESH_DIR/config.sh
-
 __ZEESH_DEBUG_FILE_NAME="zeesh-debug-$(date +%Y-%m-%d_%H-%M-%S)"
 
 for sh ($__ZEESH_DIR/**/*.sh); do
@@ -32,3 +34,7 @@ for sh ($__ZEESH_DIR/**/*.sh); do
     elif [[ $__ZEESH_DEBUG == "off" ]]; then; source $sh; fi
 
 done
+
+if [[ $__RANDOM_CANDY == "on" ]]; then
+  random-candy
+fi
