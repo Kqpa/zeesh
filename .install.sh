@@ -40,6 +40,6 @@ source ~/.zsh/zeesh/.main.sh
 EOT
 
 echo "$ZEESH_INSTALLER_INFO Installed zeesh successfully!"
-echo "$ZEESH_INSTALLER_INFO Take a look at zeesh's configuration file by running `zeesh config`"
+echo "$ZEESH_INSTALLER_INFO Take a look at zeesh's configuration file by running 'zeesh config'"
 
 exec zsh
