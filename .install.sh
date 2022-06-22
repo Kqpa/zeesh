@@ -1,20 +1,22 @@
 #!/usr/bin/env zsh
 
+autoload -U colors && colors
 ZSH_DIR="${HOME}/.zsh"
+ZEESH_INSTALLER_INFO="[${fg[green]}zeesh${reset_color}::${fg[green]}installer${reset_color}]:"
 
-printf "\u001b[31m"
+printf "${fg[red]}"
 echo "                     _      "
 echo "   _______  ___  ___| |__   "
 echo "  |_  / _ \/ _ \/ __| '_ \  "
-printf "\u001b[32m"
+printf "${fg[green]}"
 echo "   / /  __/  __/\__ \ | | | "
-printf "\u001b[34m"
+printf "${fg[blue]}"
 echo "  /___\___|\___||___/_| |_| \e[3m...is now being installed!\e[0m"
 echo "                           "
-printf "\u001b[0m"
+printf "${reset_color}" 
 
 if ! command -v git &> /dev/null; then
-    echo "[\e[32mzeesh\u001b[0m::\u001b[32minstaller\033[0m]: 'git' is required to install zeesh." && exit 1
+    echo "$ZEESH_INSTALLER_INFO 'git' is required to install zeesh." && exit 1
 fi
 
 if [ ! -d "$ZSH_DIR" ]; then
@@ -23,28 +25,13 @@ else
     cd $ZSH_DIR
 fi
 
-printf "[\e[32mzeesh\u001b[0m::\u001b[32minstaller\033[0m]: Cloning 'zeesh' from GitHub... "
+printf "$ZEESH_INSTALLER_INFO Cloning 'zeesh' from GitHub... "
 
 if git clone --quiet https://github.com/Kqpa/zeesh && cd ./zeesh/; then
     echo "OK."; else; exit 1
 fi
 
-printf "[\e[32mzeesh\u001b[0m::\u001b[32minstaller\033[0m]: Display a random color script at shell startup? [\e[32mYes\033[0m/\e[31mNo\033[0m]: " && read -r COLOR_SCRIPT_OPTION
-
-if [ "$COLOR_SCRIPT_OPTION" != "${COLOR_SCRIPT_OPTION#[Yyes]}" ]; then
-
-cat <<EOT >> ~/.zshrc
-
-# >>> zeesh initialize >>>
-source ~/.zsh/zeesh/.main.sh
-random-candy # Prints a random color script at shell startup
-# <<< zeesh initialize <<<
-
-EOT
-
-else
-
-cat <<EOT >> ~/.zshrc
+cat <<EOT >> ${HOME}/.zshrc
 
 # >>> zeesh initialize >>>
 source ~/.zsh/zeesh/.main.sh
@@ -52,8 +39,7 @@ source ~/.zsh/zeesh/.main.sh
 
 EOT
 
-fi
-
-echo "[\e[32mzeesh\u001b[0m::\u001b[32minstaller\033[0m]: Installed 'zeesh' successfully!"
+echo "$ZEESH_INSTALLER_INFO Installed zeesh successfully!"
+echo "$ZEESH_INSTALLER_INFO Take a look at zeesh's configuration file by running `zeesh config`"
 
 exec zsh
