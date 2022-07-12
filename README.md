@@ -2,55 +2,81 @@
 
 # **zeesh**
 
-```
-▒▒▒▒ ▒▒   ▒▒▒▒ ▒▒   ▒▒▒▒ ▒▒
-▒▒ ■ ▒▒   ▒▒ ■ ▒▒   ▒▒ ■ ▒▒
-▒▒ ▒▒▒▒   ▒▒ ▒▒▒▒   ▒▒ ▒▒▒▒
-```
+A lightweight, fast and easy-to-use framework for the Z Shell.
 
-## Installation
+# Installation
 
-In order to run the installation script, you'll need [`cURL`](https://curl.se), [`zsh`](https://zsh.sourceforge.io) & [`git`](https://git-scm.com) installed on your system. Although, [`zsh`](https://zsh.sourceforge.io) is required for this repository to function properly as a whole.
+</div>
+
+In order to install zeesh, you'll first need to have the following packages installed on your system:
+
+> 1. [`zsh`](https://zsh.org/): Required for zeesh to function as a whole.
+> 2. [`curl`](https://curl.se/): Used to run the installation script.
+> 3. [`git`](https://git-scm.com/): Used to download the repository.
+
+After ensuring that those packages are installed, run this command in your terminal:
+
+<div align="center">
 
 ```sh
 zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/zeesh/master/.install.sh')"
 ```
 
-## External Dependencies
-Individual shell scripts might require external dependencies if you want to use them.
+# Configuration
 
 </div>
 
-> **1**: [`vim`](https://www.vim.org) from [`./aliases/etc.sh`](./aliases/etc.sh) — `vim` aliased to `v`
->
-> **2**: [`code`](https://code.visualstudio.com) from [`./aliases/etc.sh`](./aliases/etc.sh) — `code` aliased to `c`
->
-> **3**: [`doas`](https://github.com/slicer69/doas) from [`./aliases/etc.sh`](./aliases/etc.sh) — `doas` aliased to `sudo` & `_`
->
-> **4**: [`python3`](https://www.python.org) from [`./aliases/etc.sh`](./aliases/etc.sh) — `python3` aliased to `py`
->
-> **5**: [`youtube-dl`](https://github.com/ytdl-org/youtube-dl) from [`./aliases/yt-dl.sh`](./aliases/yt-dl.sh) — `youtube-dl` aliased to `yt-mp3` & `yt-mp4`
->
-> **6**: `C/C++ Compiler` from [`./scripts/ccp.sh`](./scripts/ccp.sh) — a C/C++ complier is required to use this script
->
-> **7**: `Archive Extractor` from [`./scripts/ext.sh`](./scripts/ext.sh) — some commands might need to be additionally installed
+After installing zeesh, you should take a look at the configuration file and tweak it to your liking. You can access the configuration file by running this command in your terminal which will take you to the configuration file that controls the behavior of zeesh:
 
 <div align="center">
-
-## Information
-
-</div>
-
-If you move the repository from the home directory, you'll need to change the [`$DIRECTORY`](/.main.sh#L1) variable in the [`.main.sh`](/.main.sh) file to the directory you moved the repository to. After doing that, you will have to change the sourced path on your `~/.zshrc`.
-
-If you want to disable a shell script or a whole directory, you can add a dot before the file/folder. For example, if you want to disable [`./config/prompt.sh`](/config/prompt.sh), you can change the file name of `prompt.sh` to `.prompt.sh`. If you want to disable a directory, let's say [`./scripts`](/scripts/), you'd have to rename the `scripts` folder to `.scripts`.
-
-<div align="center">
-
-## Update
 
 ```sh
-cd ~/.zsh/zeesh && git stash && git pull && git stash pop && source ~/.zshrc
+zeesh config
 ```
 
+## Terminal Themes
+
 </div>
+
+- #### **Minimal**
+
+<kbd>
+  <img src="./.assets/themes/prompts/minimal.png" width="540" height="180">
+</kbd>
+
+- #### **Classic**
+
+<kbd>
+  <img src="./.assets/themes/prompts/classic.png" width="540" height="135">
+</kbd>
+
+
+<div align="center">
+
+## TTY Themes
+
+</div>
+
+- #### **Solarized Light**
+
+<kbd>
+  <img src="./.assets/themes/tty/solarized-light.png" width="540" height="420">
+</kbd>
+
+- #### **Solarized Dark**
+
+<kbd>
+  <img src="./.assets/themes/tty/solarized-dark.png" width="540" height="420">
+</kbd>
+
+- #### **Dracula Dark**
+
+<kbd>
+  <img src="./.assets/themes/tty/dracula-dark.png" width="540" height="420">
+</kbd>
+
+- #### **Soft Dark**
+
+<kbd>
+  <img src="./.assets/themes/tty/soft-dark.png" width="540" height="420">
+</kbd>
