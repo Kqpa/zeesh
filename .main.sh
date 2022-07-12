@@ -5,7 +5,8 @@ __ZEESH_VERSION="0.1.4" # NOTE: Don't forget to update the version on the config
 __ZEESH_DEBUG_FILE_NAME="zeesh-debug-$(date +%Y-%m-%d_%H-%M-%S)"
 
 autoload -U colors && colors && \
-setopt prompt_subst
+setopt prompt_subst && \
+setopt interactivecomments
 
 # Sourcing everything in zeesh
 
@@ -62,6 +63,4 @@ case $__TTY_THEME in
 
 esac
 
-if [[ $__RANDOM_CANDY == "on" ]]; then
-  random-candy
-fi
+if [[ $__RANDOM_CANDY == "on" ]]; then; random-candy; fi
