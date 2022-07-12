@@ -6,11 +6,11 @@ function writeln() {
 	__WRITELN_FILE_NAME="$1"
 	__WRITELN_TEXT="$2"
 
-	if [ -z $__WRITELN_FILE_NAME ] && [ -z $__WRITELN_TEXT ]; then
+	if [[ -z $__WRITELN_FILE_NAME ]] && [[ -z $__WRITELN_TEXT ]]; then
 
 		echo "$__ZEESH_WRITELN_INFO writeln <file> <text>"
 
-	elif [ -f $__WRITELN_FILE_NAME ]; then
+	elif [[ -f $__WRITELN_FILE_NAME ]]; then
 
 		echo "$__WRITELN_TEXT" >> "$__WRITELN_FILE_NAME"
 

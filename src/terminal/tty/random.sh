@@ -1,6 +1,6 @@
 function __load_random_tty() {
 
-    __ZEESH_RANDOMTTY_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mrandom-tty\033[0m]:"
+    __ZEESH_RANDOMTTY_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}random-tty${reset_color}]:"
     __RANDOM_TTY=$(( $RANDOM % 4 + 1 ))
 
   case $__RANDOM_TTY in

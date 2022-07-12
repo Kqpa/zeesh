@@ -1,6 +1,6 @@
 function __load_random_prompt() {
 
-    __ZEESH_RANDOMPROMPT_INFO="[\e[32mzeesh\u001b[0m::\u001b[32mrandom-prompt\033[0m]:"
+    __ZEESH_RANDOMPROMPT_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}random-prompt${reset_color}]:"
     __RANDOM_PROMPT=$(( $RANDOM % 2 + 1 ))
 
   case $__RANDOM_PROMPT in
