@@ -31,7 +31,7 @@ if git clone --quiet https://github.com/Kqpa/zeesh && cd ./zeesh/; then
     echo "OK."; else; exit 1
 fi
 
-cat <<EOT >> "${ZSH_DIR}"
+cat <<EOT >> "${HOME}/.zshrc"
 
 # >>> zeesh initialize >>>
 source ~/.zsh/zeesh/.main.sh
