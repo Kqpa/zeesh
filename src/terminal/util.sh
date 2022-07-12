@@ -6,7 +6,7 @@ case $__ZSH_PROMPT in
     "minimal") __load_minimal_prompt ;;
     "default") __load_default_prompt ;;
     "random") __load_random_prompt ;;
-    *) echo "$__ZEESH_UTIL_INFO $__ZSH_PROMPT: not a shell prompt, applying default shell prompt" && __load_default_prompt ;;
+    *) echo "$__ZEESH_UTIL_INFO $__ZSH_PROMPT: not a prompt, applying default prompt" && __load_default_prompt ;;
 
 esac
 

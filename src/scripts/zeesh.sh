@@ -1,3 +1,5 @@
+# Main zeesh command
+
 function zeesh() {
 
     __ZEESH_OPTION="$1"
@@ -13,7 +15,7 @@ function zeesh() {
 
         "config")
 
-            $__EDIT_EDITOR $__ZEESH_DIR/config.sh
+            $__ZEESH_EDITOR $__ZEESH_DIR/config.sh
 
         ;;
 

@@ -11,7 +11,7 @@ function __minimal_prompt_git() {
 
     __PROMPT_BRANCH=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
 
-    if [[ `git ls-files -dmo --exclude-standard 2> /dev/null` ]]; then; __HAS_MODIFICATION="*"; fi
+    if [[ $(git ls-files -dmo --exclude-standard 2> /dev/null) ]]; then; __HAS_MODIFICATION="*"; fi
     
     if [[ $__PROMPT_BRANCH == "" ]]; then : ;else 
         

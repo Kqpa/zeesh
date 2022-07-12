@@ -16,7 +16,7 @@ echo "                           "
 printf "${reset_color}" 
 
 if ! command -v git &> /dev/null; then
-    echo "$ZEESH_INSTALLER_INFO 'git' is required to install zeesh." && exit 1
+    echo "$ZEESH_INSTALLER_INFO 'git' is required to install zeesh" && exit 1
 fi
 
 if [ ! -d "$ZSH_DIR" ]; then

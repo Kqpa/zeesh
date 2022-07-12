@@ -1,6 +1,6 @@
 function __load_solarized_light_tty() {
 
-    if [ "$TERM" = "linux" ]; then
+    if [[ "$TERM" == "linux" ]]; then
     
         echo -en "\e]PB839496" # S_base00
         echo -en "\e]PA93a1a1" # S_base01

@@ -51,7 +51,7 @@ __RANDOM_CANDY="on"
 # If you want to change your `__ZSH_PROMPT`, you need
 # to set the `__ZSH_PROMPT` variable to one of the following
 # THEMES: 'default', 'random', 'classic', 'minimal'
-__ZSH_PROMPT="classic"
+__ZSH_PROMPT="minimal"
 
 # zeesh gives you the ability to customize your tty theme
 # with various pre-existing tty theme configurations.
@@ -67,12 +67,18 @@ __TTY_THEME="solarized-light"
 # can be changed to one of the following
 # COLORS: 'black', 'red', 'green', 'blue', 'magenta', 'cyan', 'white'
 __ZEESH_ACCENT_COLOR="magenta"
-__PACKAGE_MANAGER="brew" # If package manager requires root, add sudo before the name
-__UPDATE_COMMAND="update"
-__UPGRADE_COMMAND="upgrade"
-__INSTALL_COMMAND="install"
-__UNINSTALL_COMMAND="remove"
-__INFO_COMMAND="info"
+
+# zeesh ships itself with a lot of convinient shell aliases
+# which are sourced from the `./src/aliases/*` directory.
+# The package manager variables below are for the `./src/aliases/pkg.sh`
+# Change these variables according to your package manager.
+__PACKAGE_MANAGER="brew" # Main package manager command. Add sudo before the name for root privileges
+__UPDATE_COMMAND="update" # Update command for the package manager
+__UPGRADE_COMMAND="upgrade" # Upgrade command for the package manager
+__INSTALL_COMMAND="install" # Install command for the package manager
+__UNINSTALL_COMMAND="remove" # Uninstall command for the package manager
+__INFO_COMMAND="info" # Package lookup command for the package manager
+
   # You can change the `$__CPP_COMPILER` to the one you use, e.g. `clang++`, etc...
   # You can change the `$__C_COMPILER` to the one you use, e.g. `clang`, etc...
   # Reload the shell configuration after you change these values
@@ -87,5 +93,8 @@ __CPP_COMPILER="g++"
 
 __C_COMPILER="gcc"
 
-__EDIT_EDITOR="vim"
+# zeesh sometimes has to open files and 
+# the `__ZEESH_EDITOR` variable stores the
+# preferred text editor for vim to use 
+__ZEESH_EDITOR="vim"
 __ZEESH_DEBUG="off" # on turns debug on, off turns debug off

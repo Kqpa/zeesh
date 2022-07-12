@@ -7,7 +7,7 @@ function giit() {
   __GIT_PULL="$2"
   __GIT_PUSH="$3"
 
-  if [ -z $(__git_branch_name) ]; then
+  if [[ -z $(__git_branch_name) ]]; then
 
     echo "$__ZEESH_GIIT_INFO not a valid git repository" && return 1
 

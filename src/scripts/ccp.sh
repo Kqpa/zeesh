@@ -5,7 +5,7 @@ function ccp() {
   __FILE_NAME="$1"
   __ZEESH_CCP_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}ccp${reset_color}]:"
 
-  if [ -z "$__FILE_NAME" ]; then
+  if [[ -z "$__FILE_NAME" ]]; then
     
     echo "$__ZEESH_CCP_INFO ccp file <.cpp | .cc | .C | .cxx | .c++ | .c>"
 

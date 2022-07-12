@@ -5,12 +5,12 @@ function ext() {
   __EXTRACTION_FILE="$1"
   __ZEESH_EXT_INFO="[${fg[$__ZEESH_ACCENT_COLOR]}zeesh${reset_color}::${fg[$__ZEESH_ACCENT_COLOR]}ext${reset_color}]:"
   
-  if [ -z $__EXTRACTION_FILE ]; then
+  if [[ -z $__EXTRACTION_FILE ]]; then
     
     echo "$__ZEESH_EXT_INFO ext file <.tar.bz2 | .tar.gz | .bz2 | .rar | .gz | .tar | .tbz2"
     echo "                        .tgz | .zip | .Z | .7z | .deb | .tar.xz | .tar.zst>"
   
-  elif [ -f $__EXTRACTION_FILE ]; then
+  elif [[ -f $__EXTRACTION_FILE ]]; then
   
     case $__EXTRACTION_FILE in
   

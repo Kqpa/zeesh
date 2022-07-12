@@ -17,17 +17,17 @@ function edit() {
 
 	if [[ $(file -b --mime-type $(which $__EDIT_EXECUTABLE_FILE) | sed 's|/.*||') == *"application"* ]]; then
 	
-			xxd $(which $__EDIT_EXECUTABLE_FILE) | $__EDIT_EDITOR -
+			xxd $(which $__EDIT_EXECUTABLE_FILE) | $__ZEESH_EDITOR -
 	
 	elif [[ $(file -b --mime-type $(which $__EDIT_EXECUTABLE_FILE) | sed 's|/.*||') == *"text"* ]]; then
 	
 		if [[ -w $(which $__EDIT_EXECUTABLE_FILE) ]]; then
 	
-			$__EDIT_EDITOR $(which $__EDIT_EXECUTABLE_FILE)
+			$__ZEESH_EDITOR $(which $__EDIT_EXECUTABLE_FILE)
 	
 		else
 	
-			sudo $__EDIT_EDITOR $(which $__EDIT_EXECUTABLE_FILE)
+			sudo $__ZEESH_EDITOR $(which $__EDIT_EXECUTABLE_FILE)
 	
 		fi
 	

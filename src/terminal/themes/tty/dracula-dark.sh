@@ -1,6 +1,6 @@
 function __load_dracula_dark_tty() {
 
-    if [ "$TERM" = "linux" ]; then
+    if [[ "$TERM" == "linux" ]]; then
 
         printf %b '\e[40m' '\e[8]' # set default background to color 0 'dracula-bg'
         printf %b '\e[37m' '\e[8]' # set default foreground to color 7 'dracula-fg'

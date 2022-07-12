@@ -1,6 +1,6 @@
 function __load_solarized_dark_tty() {
 
-    if [ "$TERM" = "linux" ]; then
+    if [[ "$TERM" == "linux" ]]; then
 
         echo -en "\033]P0002b36"
         echo -en "\033]P1dc322f"

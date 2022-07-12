@@ -1,6 +1,6 @@
 function __load_soft_dark_tty() {
 
-    if [ "$TERM" = "linux" ]; then
+    if [[ "$TERM" == "linux" ]]; then
 
         echo -en "\e]P0232323" # Black
         echo -en "\e]P82B2B2B" # Dark grey
