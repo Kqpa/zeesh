@@ -4,7 +4,12 @@
 
 A lightweight, fast and easy-to-use framework for the Z Shell.
 
-# Installation
+```
+▒▒▒▒ ▒▒   ▒▒▒▒ ▒▒   ▒▒▒▒ ▒▒
+▒▒ ■ ▒▒   ▒▒ ■ ▒▒   ▒▒ ■ ▒▒
+▒▒ ▒▒▒▒   ▒▒ ▒▒▒▒   ▒▒ ▒▒▒▒
+```
+## Installation
 
 </div>
 
@@ -21,18 +26,19 @@ After ensuring that those packages are installed, run this command in your termi
 ```sh
 zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/zeesh/master/.install.sh')"
 ```
-
-# Configuration
+## Information
 
 </div>
 
-After installing zeesh, you should take a look at the configuration file and tweak it to your liking. You can access the configuration file by running this command in your terminal which will take you to the configuration file that controls the behavior of zeesh:
+- You can access the zeesh's configuration file by running `zeesh config`, and you should reload your shell configuration for your modifications to take effect.
+
+- If you want to uninstall zeesh, run `zeesh uninstall` in your terminal and reload your shell configuration by running `source ~/.zshrc`.
+
+- If you want to update your current zeesh installation, run `zeesh update` in your terminal and reload your shell configuration by running `source ~/.zshrc`.
+
+- If you want to disable a shell script or a whole directory, you can add a dot before the file/folder. For example, if you want to disable [`./src/scripts/ccp.sh`](./src/scripts/ccp.sh), you can change the file name of `ccp.sh` to `.ccp.sh`. - If you want to disable a directory, let's say [`./src/scripts`](./src/scripts), you can change the directory name from `scripts` to `.scripts`.
 
 <div align="center">
-
-```sh
-zeesh config
-```
 
 ## Terminal Themes
 
@@ -49,7 +55,6 @@ zeesh config
 <kbd>
   <img src="./.assets/themes/prompts/classic.png" width="540" height="135">
 </kbd>
-
 
 <div align="center">
 
