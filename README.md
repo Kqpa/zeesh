@@ -40,7 +40,17 @@ zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/zeesh/master/.install.
 
 <div align="center">
 
-## Terminal Themes
+## Features
+
+</div>
+
+- zeesh ships itself with a lot of convinient shell aliases that are sourced from [`./src/aliases/*`](./src/aliases)
+- zeesh has a lot of convinient shell scripts that allow you to automate tasks, which are sourced from [`./src/scripts/*`](./src/scripts).
+- zeesh gives you the ability to tweak your terminal with pre-configured prompts & TTY themes.
+
+<div align="center">
+
+## Shell Prompts
 
 </div>
 

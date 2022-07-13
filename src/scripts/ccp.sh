@@ -22,13 +22,13 @@ function ccp() {
 
         echo "$__ZEESH_CCP_INFO compiling & executing '$__FILE_NAME'..."
 
-        $__CPP_COMPILER -Wall -std=c++17 $__FILE_NAME -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
+        $__CPP_COMPILER -Wall -std=c++17 $__FILE_NAME -o $__OUTPUT && ./$__OUTPUT && \rm $__OUTPUT
 
       elif [[ .${__FILE_NAME#*.} == .c ]]; then
 
         echo "$__ZEESH_CCP_INFO compiling & executing '$__FILE_NAME'..."
 
-        $__C_COMPILER -Wall -std=c17 $__FILE_NAME -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
+        $__C_COMPILER -Wall -std=c17 $__FILE_NAME -o $__OUTPUT && ./$__OUTPUT && \rm $__OUTPUT
 
       else
 
@@ -45,13 +45,13 @@ function ccp() {
 
         echo "$__ZEESH_CCP_INFO compiling & executing '$__FILE_NAME' as C++..."
 
-        $__CPP_COMPILER -Wall -std=c++17 $__FILE_NAME$__PREFERABLE_FILE_EXTENSION -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
+        $__CPP_COMPILER -Wall -std=c++17 $__FILE_NAME$__PREFERABLE_FILE_EXTENSION -o $__OUTPUT && ./$__OUTPUT && \rm $__OUTPUT
       
       elif [[ .${__PREFERABLE_FILE_EXTENSION#*.} == .c ]]; then
 
         echo "$__ZEESH_CCP_INFO compiling & executing '$file_name' as C..."
 
-        $__C_COMPILER -Wall -std=c17 $__FILE_NAME$__PREFERABLE_FILE_EXTENSION -o $__OUTPUT && ./$__OUTPUT && rm -f $__OUTPUT
+        $__C_COMPILER -Wall -std=c17 $__FILE_NAME$__PREFERABLE_FILE_EXTENSION -o $__OUTPUT && ./$__OUTPUT && \rm $__OUTPUT
 
       else
 
