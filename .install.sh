@@ -25,7 +25,7 @@ else
     cd $ZSH_DIR
 fi
 
-printf "$ZEESH_INSTALLER_INFO Cloning 'zeesh' from GitHub... "
+printf "$ZEESH_INSTALLER_INFO Cloning zeesh from GitHub... "
 
 if git clone --quiet https://github.com/Kqpa/zeesh && cd ./zeesh/; then
     echo "OK."; else; exit 1

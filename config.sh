@@ -65,7 +65,7 @@ __TTY_THEME="solarized-light"
 # applications. The whole accent color of zeesh can be modified
 # by changing the `__ZEESH_ACCENT_COLOR` variable. This variable
 # can be changed to one of the following
-# COLORS: 'black', 'red', 'green', 'blue', 'magenta', 'cyan', 'white'
+# COLORS: 'random', 'black', 'red', 'green', 'blue', 'magenta', 'cyan', 'white'
 __ZEESH_ACCENT_COLOR="cyan"
 
 # zeesh ships itself with a lot of convinient shell aliases
