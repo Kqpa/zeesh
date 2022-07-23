@@ -59,7 +59,7 @@ __ZSH_PROMPT="minimal"
 # the `__TTY_THEME` variable to one of the following
 # THEMES: 'default', 'random', 'dracula-dark', 'soft-dark',
 # 'solarized-dark', 'solarized-light'
-__TTY_THEME="solarized-light"
+__TTY_THEME="solarized-dark"
 
 # zeesh uses accent colors for the majority of it's
 # applications. The whole accent color of zeesh can be modified
