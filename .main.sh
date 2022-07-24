@@ -14,7 +14,7 @@ source $__ZEESH_DIR/config.sh
 
 if [[ $__ZEESH_ACCENT_COLOR == "random" ]]; then
 
-    __RANDOM_ACCENT_COLOR=$(( $RANDOM % 7 + 1 ))
+    __RANDOM_ACCENT_COLOR=$(( $RANDOM % 8 + 1 ))
 
     case $__RANDOM_ACCENT_COLOR in
         1) __ZEESH_ACCENT_COLOR="black" ;;
@@ -24,6 +24,8 @@ if [[ $__ZEESH_ACCENT_COLOR == "random" ]]; then
         5) __ZEESH_ACCENT_COLOR="magenta" ;;
         6) __ZEESH_ACCENT_COLOR="cyan" ;;
         7) __ZEESH_ACCENT_COLOR="white" ;;
+        8) __ZEESH_ACCENT_COLOR="yellow" ;;
+        *) __ZEESH_ACCENT_COLOR="white" ;;
     esac
 
 fi
@@ -67,6 +69,7 @@ case $__ZSH_PROMPT in
     "classic") __load_classic_prompt ;;
     "minimal") __load_minimal_prompt ;;
     "default") __load_default_prompt ;;
+    "space") __load_space_prompt ;;
     "random") __load_random_prompt ;;
     *) echo "$__ZEESH_LOAD_INFO $__ZSH_PROMPT: not a prompt, applying default prompt" && __load_default_prompt ;;
 

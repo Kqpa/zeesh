@@ -60,6 +60,13 @@ zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/zeesh/master/.install.
   <img src="./.assets/themes/prompts/minimal.png" width="540" height="180">
 </kbd>
 
+- #### **Space**
+
+<kbd>
+  <img src="./.assets/themes/prompts/space.png" width="540" height="180">
+</kbd>
+
+
 - #### **Classic**
 
 <kbd>

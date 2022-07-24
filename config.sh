@@ -50,7 +50,7 @@ __RANDOM_CANDY="on"
 # with various pre-existing prompt configurations.
 # If you want to change your `__ZSH_PROMPT`, you need
 # to set the `__ZSH_PROMPT` variable to one of the following
-# THEMES: 'default', 'random', 'classic', 'minimal'
+# THEMES: 'random', 'default', 'classic', 'minimal', 'space'
 __ZSH_PROMPT="minimal"
 
 # zeesh gives you the ability to customize your tty theme
@@ -65,7 +65,7 @@ __TTY_THEME="solarized-dark"
 # applications. The whole accent color of zeesh can be modified
 # by changing the `__ZEESH_ACCENT_COLOR` variable. This variable
 # can be changed to one of the following
-# COLORS: 'random', 'black', 'red', 'green', 'blue', 'magenta', 'cyan', 'white'
+# COLORS: 'random', 'black', 'red', 'green', 'blue', 'magenta', 'cyan', 'white', 'yellow'
 __ZEESH_ACCENT_COLOR="cyan"
 
 # zeesh ships itself with a lot of convinient shell aliases
