@@ -21,9 +21,13 @@ function zeesh() {
 
         "update")
 
-            cd $__ZEESH_DIR && git stash && git pull && git stash pop && source "$HOME/.zshrc"
-            
-            # soon, test 2
+            printf "$__ZEESH_ZEESH_INFO updating zeesh..."
+
+            mv "$__ZEESH_DIR/config.sh" "$HOME" && \
+            rm -rf "$__ZEESH_DIR" && \
+            git clone 'https://github.com/Kqpa/zeesh' "$__ZEESH_DIR" && \
+            echo "OK"
+            echo "Re-start your shell for the changes to take effect"
 
         ;;
 
