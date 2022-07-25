@@ -23,6 +23,8 @@ function zeesh() {
 
             cd $__ZEESH_DIR && git stash && git pull && git stash pop && source "$HOME/.zshrc"
             
+            # soon
+
         ;;
 
         "info")
