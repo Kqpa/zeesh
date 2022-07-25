@@ -15,13 +15,53 @@ function zeesh() {
 
         "config")
 
-            $__ZEESH_EDITOR $__ZEESH_DIR/config.sh
+            if [[ -z "$2" ]]; then
+            
+                echo "$__ZEESH_ZEESH_INFO zeesh config <reset | recover | edit]" && return
+            
+            else
+                
+                case $2 in
 
+                    "reset")
+                    
+                        echo "$__ZEESH_ZEESH_INFO resetting zeesh configuration"
+                        mv "$__ZEESH_DIR/config.sh" "$__ZEESH_DIR/.config.backup.sh" && \
+                        cp "$__ZEESH_DIR/.config.example.sh" "$__ZEESH_DIR/config.sh"
+                    
+                    ;;
+                    
+                    "recover")
+                    
+                        if [ -f "$__ZEESH_DIR/.config.backup.sh" ]; then
+                                \rm "$__ZEESH_DIR/config.sh" && \
+                                mv "$__ZEESH_DIR/.config.backup.sh" "$__ZEESH_DIR/config.sh"
+                        else
+                                echo "$__ZEESH_ZEESH_INFO no backup config file found"
+                        fi
+                    
+                    ;;
+                    
+                    "edit")
+                    
+                        $__ZEESH_EDITOR "$__ZEESH_DIR/config.sh"
+                    
+                    ;;
+                    
+                    *)
+                    
+                        echo "$__ZEESH_ZEESH_INFO $1: $2: unknown option"
+                        
+                    ;;
+
+                esac
+            
+            fi
         ;;
 
         "update")
 
-            printf "$__ZEESH_ZEESH_INFO updating zeesh..."
+            printf "$__ZEESH_ZEESH_INFO updating zeesh... "
             mv "$__ZEESH_DIR/config.sh" "$HOME/.zeesh.config.tmp" && \
             rm -rf "$__ZEESH_DIR" && \
             cd "$(dirname $__ZEESH_DIR)" && \
