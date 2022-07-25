@@ -31,7 +31,7 @@ if git clone --quiet https://github.com/Kqpa/zeesh && cd ./zeesh/; then
     echo "OK."; else; exit 1
 fi
 
-cp ./.config.template.sh ./config.sh
+cp ./.config.example.sh ./config.sh
 
 cat <<EOT >> "${HOME}/.zshrc"
 

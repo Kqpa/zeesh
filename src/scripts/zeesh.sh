@@ -22,10 +22,12 @@ function zeesh() {
         "update")
 
             printf "$__ZEESH_ZEESH_INFO updating zeesh..."
-
-            mv "$__ZEESH_DIR/config.sh" "$HOME" && \
+            mv "$__ZEESH_DIR/config.sh" "$HOME/.zeesh.config.tmp" && \
             rm -rf "$__ZEESH_DIR" && \
-            git clone 'https://github.com/Kqpa/zeesh' "$__ZEESH_DIR" && \
+            cd "$(dirname $__ZEESH_DIR)" && \
+            git clone --quiet 'https://github.com/Kqpa/zeesh' && \
+            mv "$HOME/.zeesh.config.tmp" "$__ZEESH_DIR/config.sh" && \
+            cd "$__ZEESH_DIR" && \
             echo "OK"
             echo "Re-start your shell for the changes to take effect"
 
