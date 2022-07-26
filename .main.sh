@@ -1,7 +1,7 @@
 # Entry point to zeesh
 
 __ZEESH_DIR="${${(%):-%x}%/*}"
-__ZEESH_VERSION="0.1.4" # NOTE: Don't forget to update the version on the configuration file
+__ZEESH_VERSION="0.1.5" # NOTE: Don't forget to update the version on the configuration file
 __ZEESH_DEBUG_FILE_NAME="zeesh-debug-$(date +%Y-%m-%d_%H-%M-%S)"
 
 autoload -U colors && colors && \

@@ -2,7 +2,7 @@
 #   _______  ___  ___| |__
 #  |_  / _ \/ _ \/ __| '_ \
 #   / /  __/  __/\__ \ | | |
-#  /___\___|\___||___/_| |_| v0.1.4
+#  /___\___|\___||___/_| |_| v0.1.5
 #
 #   GitHub       | https://github.com/Kqpa/zeesh/
 #   Bug Reports  | https://github.com/Kqpa/zeesh/issues
