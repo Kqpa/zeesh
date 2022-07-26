@@ -65,8 +65,8 @@ function zeesh() {
             cd "$__ZEESH_DIR" && \
             git fetch --all --quiet && \
             git reset --hard --quiet origin/master && \
-            echo "OK"
-            echo "Re-start your shell for the changes to take effect"
+            echo "OK" && \
+            echo "$__ZEESH_ZEESH_INFO Re-start your shell for the changes to take effect"
 
         ;;
 
