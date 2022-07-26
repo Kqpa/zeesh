@@ -17,7 +17,7 @@ function zeesh() {
 
             if [[ -z "$2" ]]; then
             
-                echo "$__ZEESH_ZEESH_INFO zeesh config <reset | recover | edit>" && return
+                echo "$__ZEESH_ZEESH_INFO zeesh config <reset | recover | example | edit>" && return
             
             else
                 
@@ -41,6 +41,16 @@ function zeesh() {
                                 echo "$__ZEESH_ZEESH_INFO No backup config file found"
                         fi
                     
+                    ;;
+
+                    "example") 
+
+                        if command -v bat &> /dev/null || command -v batcat &> /dev/null; then
+                            bat "$__ZEESH_DIR/.config.example.sh" 
+                        else  
+                            cat "$__ZEESH_DIR/.config.example.sh" | less
+                        fi
+
                     ;;
                     
                     "edit")
