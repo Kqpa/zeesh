@@ -62,11 +62,9 @@ function zeesh() {
         "update")
 
             printf "$__ZEESH_ZEESH_INFO Updating zeesh... "
-            mv "$__ZEESH_DIR/config.sh" "$HOME/.zeesh.config.tmp" && \
             cd "$__ZEESH_DIR" && \
             git fetch --all --quiet && \
             git reset --hard --quiet origin/master && \
-            mv "$HOME/.zeesh.config.tmp" "$__ZEESH_DIR/config.sh" && \
             echo "OK"
             echo "Re-start your shell for the changes to take effect"
 
