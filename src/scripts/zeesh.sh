@@ -107,7 +107,7 @@ function zeesh() {
 
         "uninstall")
 
-            echo "$__ZEESH_ZEESH_INFO backing up '~/.zshrc' under '~/.zshrc.zeesh-backup'"
+            echo "$__ZEESH_ZEESH_INFO Backing up '~/.zshrc' under '~/.zshrc.zeesh-backup'"
 
             cp "$HOME/.zshrc" "$HOME/.zshrc.zeesh-backup"
         
@@ -127,7 +127,7 @@ function zeesh() {
             mv "$HOME/.zshrc.zeesh-temp" "$HOME/.zshrc" && \
             \rm -rf "$__ZEESH_DIR"
 
-            echo "$__ZEESH_ZEESH_INFO uninstalled zeesh, re-start your shell"
+            echo "$__ZEESH_ZEESH_INFO Uninstalled zeesh, re-start your shell"
             
         ;;
         
