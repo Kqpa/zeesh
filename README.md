@@ -17,7 +17,7 @@ In order to install zeesh, you'll first need to have the following packages inst
 
 > 1. [`zsh`](https://zsh.org/): Required for zeesh to function as a whole.
 > 2. [`curl`](https://curl.se/): Used to run the installation script.
-> 3. [`git`](https://git-scm.com/): Used to download the repository.
+> 3. [`git`](https://git-scm.com/): Used to download the repository & for other internal components
 
 After ensuring that those packages are installed, run this command in your terminal:
 
@@ -30,7 +30,7 @@ zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/zeesh/master/.install.
 
 </div>
 
-- You can access the zeesh's configuration file by running `zeesh config`, and you should reload your shell configuration for your modifications to take effect.
+- You can manage zeesh's configuration by running `zeesh config`. You have a bunch of options like editing & resetting your zeesh configuraiton.
 
 - If you want to uninstall zeesh, run `zeesh uninstall` in your terminal and reload your shell configuration by running `source ~/.zshrc`.
 
