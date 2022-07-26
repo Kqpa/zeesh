@@ -73,9 +73,11 @@ function zeesh() {
         "update")
 
             printf "$__ZEESH_ZEESH_INFO Updating zeesh... "
-            cd "$__ZEESH_DIR" && \
-            git fetch --all --quiet && \
-            git reset --hard --quiet origin/master && \
+            (
+                cd "$__ZEESH_DIR" && \
+                git fetch --all --quiet && \
+                git reset --hard --quiet origin/master
+            ) && \
             echo "OK" && \
             echo "$__ZEESH_ZEESH_INFO Re-start your shell for the changes to take effect"
 
