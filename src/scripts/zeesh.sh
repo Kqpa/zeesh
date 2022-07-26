@@ -33,6 +33,7 @@ function zeesh() {
                     
                     "recover")
                     
+                        echo "$__ZEESH_ZEESH_INFO Recovering zeesh configuration"
                         if [ -f "$__ZEESH_DIR/.config.backup.sh" ]; then
                                 \rm "$__ZEESH_DIR/config.sh" && \
                                 mv "$__ZEESH_DIR/.config.backup.sh" "$__ZEESH_DIR/config.sh"
