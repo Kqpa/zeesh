@@ -8,32 +8,36 @@ function edit() {
 	if [[ -z "$__EDIT_EXECUTABLE_FILE" ]]; then
 
 		echo "$__ZEESH_EDIT_INFO edit <executable>" && return 0
-	
+
+	elif ! command -v file &>/dev/null; then
+
+		echo "$__ZEESH_EDIT_INFO the 'file' command is required for edit to function" && return 1
+
 	elif [[ ! -f $(which $__EDIT_EXECUTABLE_FILE) ]]; then
-	
+
 		echo "$__ZEESH_EDIT_INFO '$__EDIT_EXECUTABLE_FILE': not a valid executable on '\$PATH'" && return 1
-	
+
 	fi
 
 	if [[ $(file -b --mime-type $(which $__EDIT_EXECUTABLE_FILE) | sed 's|/.*||') == *"application"* ]]; then
-	
-			xxd $(which $__EDIT_EXECUTABLE_FILE) | $__ZEESH_EDITOR -
-	
+
+		xxd $(which $__EDIT_EXECUTABLE_FILE) | $__ZEESH_EDITOR -
+
 	elif [[ $(file -b --mime-type $(which $__EDIT_EXECUTABLE_FILE) | sed 's|/.*||') == *"text"* ]]; then
-	
+
 		if [[ -w $(which $__EDIT_EXECUTABLE_FILE) ]]; then
-	
+
 			$__ZEESH_EDITOR $(which $__EDIT_EXECUTABLE_FILE)
-	
+
 		else
-	
+
 			sudo $__ZEESH_EDITOR $(which $__EDIT_EXECUTABLE_FILE)
-	
+
 		fi
-	
+
 	else
-	
+
 		echo "$__ZEESH_EDIT_INFO $__EDIT_EXECUTABLE_FILE: not a valid file format" && return 1
-	
+
 	fi
 }

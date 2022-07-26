@@ -17,7 +17,7 @@ function zeesh() {
 
             if [[ -z "$2" ]]; then
             
-                echo "$__ZEESH_ZEESH_INFO zeesh config <reset | recover | edit]" && return
+                echo "$__ZEESH_ZEESH_INFO zeesh config <reset | recover | edit>" && return
             
             else
                 
@@ -25,7 +25,7 @@ function zeesh() {
 
                     "reset")
                     
-                        echo "$__ZEESH_ZEESH_INFO resetting zeesh configuration"
+                        echo "$__ZEESH_ZEESH_INFO Resetting zeesh configuration"
                         mv "$__ZEESH_DIR/config.sh" "$__ZEESH_DIR/.config.backup.sh" && \
                         cp "$__ZEESH_DIR/.config.example.sh" "$__ZEESH_DIR/config.sh"
                     
@@ -37,7 +37,7 @@ function zeesh() {
                                 \rm "$__ZEESH_DIR/config.sh" && \
                                 mv "$__ZEESH_DIR/.config.backup.sh" "$__ZEESH_DIR/config.sh"
                         else
-                                echo "$__ZEESH_ZEESH_INFO no backup config file found"
+                                echo "$__ZEESH_ZEESH_INFO No backup config file found"
                         fi
                     
                     ;;
