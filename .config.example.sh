@@ -64,8 +64,9 @@ __TTY_THEME="solarized-dark"
 # zeesh uses accent colors for the majority of it's
 # applications. The whole accent color of zeesh can be modified
 # by changing the `__ZEESH_ACCENT_COLOR` variable. This variable
-# can be changed to one of the following
-# COLORS: 'random', 'black', 'red', 'green', 'blue', 'magenta', 'cyan', 'white', 'yellow'
+# can be changed to one of the following. If you don't want
+# an accent color, set the variable to `off`
+# COLORS: 'off', 'random', 'black', 'red', 'green', 'blue', 'magenta', 'cyan', 'white', 'yellow'
 __ZEESH_ACCENT_COLOR="cyan"
 
 # zeesh ships itself with a lot of convinient shell aliases
