@@ -25,7 +25,7 @@ function zeesh() {
 
                     "reset")
                     
-                        printf "$__ZEESH_ZEESH_INFO Resetting zeesh configuration..."
+                        printf "$__ZEESH_ZEESH_INFO Resetting zeesh configuration... "
                         if (
                             mv "$__ZEESH_DIR/config.sh" "$__ZEESH_DIR/.config.backup.sh" && \
                             cp "$__ZEESH_DIR/.config.example.sh" "$__ZEESH_DIR/config.sh"
@@ -40,7 +40,7 @@ function zeesh() {
                     
                     "recover")
                     
-                        printf "$__ZEESH_ZEESH_INFO Recovering zeesh configuration..."
+                        printf "$__ZEESH_ZEESH_INFO Recovering zeesh configuration... "
                         if [ -f "$__ZEESH_DIR/.config.backup.sh" ]; then
                                 if (
                                     \rm "$__ZEESH_DIR/config.sh" && \
