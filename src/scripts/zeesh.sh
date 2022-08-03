@@ -25,20 +25,35 @@ function zeesh() {
 
                     "reset")
                     
-                        echo "$__ZEESH_ZEESH_INFO Resetting zeesh configuration"
-                        mv "$__ZEESH_DIR/config.sh" "$__ZEESH_DIR/.config.backup.sh" && \
-                        cp "$__ZEESH_DIR/.config.example.sh" "$__ZEESH_DIR/config.sh"
+                        printf "$__ZEESH_ZEESH_INFO Resetting zeesh configuration..."
+                        if (
+                            mv "$__ZEESH_DIR/config.sh" "$__ZEESH_DIR/.config.backup.sh" && \
+                            cp "$__ZEESH_DIR/.config.example.sh" "$__ZEESH_DIR/config.sh"
+                        ); then
+                            echo "OK."
+                            echo "$__ZEESH_ZEESH_INFO Re-start your shell for the changes to take effect"
+                        else
+                            return 1
+                        fi
                     
                     ;;
                     
                     "recover")
                     
-                        echo "$__ZEESH_ZEESH_INFO Recovering zeesh configuration"
+                        printf "$__ZEESH_ZEESH_INFO Recovering zeesh configuration..."
                         if [ -f "$__ZEESH_DIR/.config.backup.sh" ]; then
-                                \rm "$__ZEESH_DIR/config.sh" && \
-                                mv "$__ZEESH_DIR/.config.backup.sh" "$__ZEESH_DIR/config.sh"
+                                if (
+                                    \rm "$__ZEESH_DIR/config.sh" && \
+                                    mv "$__ZEESH_DIR/.config.backup.sh" "$__ZEESH_DIR/config.sh"
+                                ); then
+                                    echo "OK."
+                                    echo "$__ZEESH_ZEESH_INFO Re-start your shell for the changes to take effect"
+                                else
+                                    return 1
+                                fi
                         else
-                                echo "$__ZEESH_ZEESH_INFO No backup config file found"
+                                echo "\n$__ZEESH_ZEESH_INFO No backup config file found"
+                                return 1
                         fi
                     
                     ;;
@@ -72,14 +87,17 @@ function zeesh() {
 
         "update")
 
-            printf "$__ZEESH_ZEESH_INFO Updating zeesh... "
-            (
+            printf "$__ZEESH_ZEESH_INFO Updating zeesh... "     
+            if (
                 cd "$__ZEESH_DIR" && \
                 git fetch --all --quiet && \
                 git reset --hard --quiet origin/master
-            ) && \
-            echo "OK" && \
-            echo "$__ZEESH_ZEESH_INFO Re-start your shell for the changes to take effect"
+            ); then
+                echo "OK."
+                echo "$__ZEESH_ZEESH_INFO Re-start your shell for the changes to take effect"
+            else
+                return 1
+            fi
 
         ;;
 
