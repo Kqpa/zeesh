@@ -110,7 +110,7 @@ function zeesh() {
             printf "${fg[green]}"
             echo "   / /  __/  __/\__ \ | | | "
             printf "${fg[blue]}"
-            echo "  /___\___|\___||___/_| |_| ${fg_bold[$__ZEESH_ACCENT_COLOR]}$__ZEESH_VERSION${reset_color}"
+            echo "  /___\___|\___||___/_| |_| ${fg_bold[$__ZEESH_ACCENT_COLOR]}v$__ZEESH_VERSION${reset_color}"
             echo "                           "
             printf "${reset_color}"
             echo " ${fg[$__ZEESH_ACCENT_COLOR]}Installation Path${reset_color}  ${__BOLDON}|${__BOLDOFF} ${(D)__ZEESH_DIR}"
