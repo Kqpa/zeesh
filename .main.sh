@@ -54,7 +54,7 @@ for __ZEESH_SOURCE ($__ZEESH_DIR/**/*.sh); do
 
                 fi
 
-        elif [[ $__ZEESH_DEBUG == "off" ]]; then; source $__ZEESH_SOURCE; fi
+        else source $__ZEESH_SOURCE; fi
 
     fi
 

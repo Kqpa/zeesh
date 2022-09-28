@@ -117,5 +117,5 @@ __ZEESH_EDITOR="vim"
 # regarding zeesh or if you want to submit a bug report. To turn
 # on the zeesh debug mode, set the `__ZEESH_DEBUG` variable to "on".
 # To turn off the zeesh debug mode, set the `__ZEESH_DEBUG` variable
-# to "off".
+# to "off". The zeesh debug logs are stored in `./.debug/*`
 __ZEESH_DEBUG="off"
