@@ -88,3 +88,5 @@ case $__TTY_THEME in
 esac
 
 if [[ $__RANDOM_CANDY == "on" ]]; then; random-candy; fi
+
+if [[ $__ZEESH_DATE == "on" ]]; then; echo "\n\t${fg[$__ZEESH_ACCENT_COLOR]}$(date '+%a %b %d %T')\n"; fi

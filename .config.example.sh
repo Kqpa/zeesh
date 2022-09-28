@@ -46,6 +46,11 @@ __DISABLE_DOAS="on"
 # variable to "off".
 __RANDOM_CANDY="on"
 
+# Displays the date on shell startup, set the variable to 
+# `on` if you want the date displayed on startup, set it
+# to `off` if you don't want it to display the date at startup
+__ZEESH_DATE="off"
+
 # zeesh gives you the ability to customize your prompt
 # with various pre-existing prompt configurations.
 # If you want to change your `__ZSH_PROMPT`, you need
