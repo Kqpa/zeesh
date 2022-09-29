@@ -36,6 +36,8 @@ zsh -c "$(curl -s 'https://raw.githubusercontent.com/Kqpa/zeesh/master/.install.
 
 - If you want to update your current zeesh installation, run `zeesh update` in your terminal and reload your shell configuration by running `source ~/.zshrc`.
 
+- If your zeesh configuration is not up-to-date, you can see the latest configuration file by running `zeesh config example`. If you want to use the latest zeesh configuration, run `zeesh config reset`, this will reset your configuration to the default configuration of your zeesh installation. You can roll-back to your previous zeesh configuration by running `zeesh config recover`.
+
 - If you want to disable a shell script or a whole directory, you can add a dot before the file/folder. For example, if you want to disable [`./src/scripts/ccp.sh`](./src/scripts/ccp.sh), you can change the file name of `ccp.sh` to `.ccp.sh`. - If you want to disable a directory, let's say [`./src/scripts`](./src/scripts), you can change the directory name from `scripts` to `.scripts`.
 
 <div align="center">
